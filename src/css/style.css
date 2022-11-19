@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* body {
+  background-color: black;
+} */
+
+/* ლოგო */
+
+.logo {
+  width: 180px;
+  height: 18px;
+}
+
+/* ციმციმა დეტონატორი */
+
+.live-indicator-block {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(237, 242, 244, 1);
+  border-radius: 16px;
+  width: 150px;
+  height: 30px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.live-indicator-block .live-indicator .blink {
+  animation: blinker 1s cubic-bezier(0.5, 0, 1, 1) infinite alternate;
+  vertical-align: baseline;
+}
+
+.live-indicator {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(43, 45, 66, 1);
+  padding-left: 10px;
+}
+
+.blink {
+  color: red;
+  margin-left: -4px;
+  padding-right: 10px;
+  margin-left: 10px;
+}
+
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* აიქონები */
+
+i {
+  color: rgba(43, 45, 66, 1);
+  width: 16px;
+  height: 16px;
+}
+
+i:hover {
+  color: rgba(239, 35, 60, 1);
+  cursor: pointer;
+}
+
+.map {
+  display: block;
+  max-width: 100%;
+}
+
+.bg {
+  width: 880px;
+  height: 600px;
+  z-index: 3;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1)
+  );
+}
