@@ -4,6 +4,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* ლოგო */
 
 .logo {
@@ -312,7 +316,7 @@ a:active {
 
 
 
-
+/* 
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -351,4 +355,56 @@ a:active {
 .slider .slide {
   height: 100px;
   width: 250px;
+} */
+
+
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+ }
+  100% {
+    transform: translateX(calc(-250px * 7));
+ }
+}
+/* Styling */
+#logos-home-page .slider {
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+#logos-home-page .slider:before, #logos-home-page .slider:after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+#logos-home-page .slider:after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(360deg);
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  -ms-transform: rotateZ(360deg);
+  -o-transform: rotateZ(360deg);
+}
+#logos-home-page .slider:before {
+  left: 0;
+  top: 0;
+}
+#logos-home-page .slide-track {
+  animation: scroll 20s linear infinite;
+  display: flex;
+  width: calc(250px * 30);
+  -webkit-animation: scroll 20s linear infinite;
+}
+#logos-home-page div.slide {
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
