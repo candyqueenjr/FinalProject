@@ -1,3 +1,7 @@
+
+
+//active class fro navigation
+
 let navLink = document.querySelectorAll(".nav-link")
 navLink.forEach( a =>{
     a.addEventListener('mouseover', function(){
@@ -7,9 +11,100 @@ navLink.forEach( a =>{
 })
 
 
+//Logo eyes
+
+window.requestAnimFrame = (function() {
+	return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+  function(callback) {
+	  window.setTimeout(callback, 1000 / 60);
+	};
+})();
+
+var ctx,
+    WIDTH,
+    HEIGHT,
+    leftEye,
+    rightEye,
+    mouse,
+
+Eye = function(pos) {
+  this.pos = {
+		x : pos.x,
+		y : pos.y
+	};
+	this.center = {
+		x : pos.x,
+		y : pos.y
+	};
+	this.translation = {
+		x : (window.innerWidth / 2 - canvas.width / 2) + this.center.x,
+		y : this.center.y
+  };
+}
+
+Eye.prototype.draw = function() {
+  ctx.beginPath();
+	ctx.arc(this.pos.x, this.pos.y, 3, 0, Math.PI * 2);
+	ctx.fillStyle = '#333';
+	ctx.fill();
+}
+
+Eye.prototype.update = function() {
+	var deltaX = mouse.x - this.translation.x;
+	var deltaY = mouse.y - this.translation.y;
+	var mag = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+	var angleRad = Math.atan2(deltaY, deltaX);
+	var newPosX = this.center.x + 6 * Math.cos(angleRad);
+	var newPosY = this.center.y + 11 * Math.sin(angleRad);
+	this.pos.x += (newPosX - this.pos.x) / 5;
+	this.pos.y += (newPosY - this.pos.y) / 5;
+}
+			
+var init = function() {
+  var canvas = document.getElementById('canvas');
+	ctx = canvas.getContext('2d');
+	canvas.width = WIDTH = 750;
+	canvas.height = HEIGHT = 85;
+	leftEye = new Eye({
+	  x : WIDTH / 2 - 14,
+		y : HEIGHT / 2 + 18
+	});
+	rightEye = new Eye({
+		x : WIDTH / 2 + 8,
+		y : HEIGHT / 2 + 18
+	});
+	mouse = {
+		x : 0,
+		y : 0
+	};
+	bindEventHandlers();
+	draw();
+}
+    
+var draw = function() {
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
+	leftEye.update();
+	rightEye.update();
+	leftEye.draw();
+	rightEye.draw();
+  requestAnimFrame(draw);
+}
+    
+var bindEventHandlers = function() {
+  document.onmousemove = function(e) {
+	  mouse.x = e.pageX;
+		mouse.y = e.pageY;
+	}
+}
+
+init();
 
 
-var _CONTENT = [ "Explode", "Take", "Make", "Boom" ];
+
+
+//header type
+
+var _CONTENT = [ "Explode", "Blow up", "Detonate", "Boom" ];
 
 // Current sentence being processed
 var _PART = 0;
@@ -33,7 +128,7 @@ function Type() {
 	if(text === _CONTENT[_PART]) {
 		clearInterval(_INTERVAL_VAL);
 		setTimeout(function() {
-			_INTERVAL_VAL = setInterval(Delete, 50);
+			_INTERVAL_VAL = setInterval(Delete, 150);
 		}, 1000);
 	}
 }
@@ -57,14 +152,28 @@ function Delete() {
 
 		// Start to display the next sentence after some time
 		setTimeout(function() {
-			_INTERVAL_VAL = setInterval(Type, 100);
+			_INTERVAL_VAL = setInterval(Type, 150);
 		}, 200);
 	}
 }
 
 // Start the typing effect on load
-_INTERVAL_VAL = setInterval(Type, 100);
+_INTERVAL_VAL = setInterval(Type, 150);
 
 
 
 
+//moving eyes
+
+//  document.querySelector("body").addEventListener('mousemove', eyeball);
+//        function eyeball(){
+//         var eye = document.querySelectorAll(".eye");
+//         eye.forEach(function (eye) {
+//         let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2); 
+//         let y= (eye.getBoundingClientRect().top) + (eye.clientHeight / 2); 
+//         let radian = Math.atan2(event.pageX - x,event.pageY - y);
+//         let rot = (radian * (180 / Math.PI) * -1) + 270;
+//         eye.style.transform = "rotate("+ rot +"deg)";
+//           })
+           
+//        }

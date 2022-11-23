@@ -11,6 +11,13 @@
   height: 18px;
 }
 
+#canvas {
+	display: block;
+	position: absolute;
+  top: 0;
+  left: 0;
+}
+
 /* ციმციმა დეტონატორი */
 
 .live-indicator-block {
@@ -317,7 +324,6 @@ a:active {
 .slider {
   height: 100px;
   margin: auto;
-  overflow: hidden;
   position: relative;
   width: 960px;
 }
