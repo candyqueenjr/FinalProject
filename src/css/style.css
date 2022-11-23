@@ -262,21 +262,21 @@ a:active {
 
 
 
-/* Animation */
+/* Animation 2*/
 @keyframes scroll2 {
   0% {
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
+    transform: translateX(-2300px);
+    -webkit-transform: translateX(-2300px);
+    -moz-transform: translateX(-2300px);
+    -ms-transform: translateX(-2300px);
+    -o-transform: translateX(-2300px);
 }
   100% {
-    transform: translateX(calc(250px * 30));
-    -webkit-transform: translateX(calc(250px * 30));
-    -moz-transform: translateX(calc(250px * 30));
-    -ms-transform: translateX(calc(250px * 30));
-    -o-transform: translateX(calc(250px * 30));
+    transform: translateX(calc(0px * 3));
+    -webkit-transform: translateX(calc(0px * 3));
+    -moz-transform: translateX(calc(0px * 3));
+    -ms-transform: translateX(calc(0px * 3));
+    -o-transform: translateX(calc(0px * 3));
 }
 }
 /* Styling */

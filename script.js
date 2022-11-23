@@ -14,7 +14,7 @@ navLink.forEach( a =>{
 //Logo eyes
 
 window.requestAnimFrame = (function() {
-	return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+				return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
   function(callback) {
 	  window.setTimeout(callback, 1000 / 60);
 	};
@@ -37,7 +37,7 @@ Eye = function(pos) {
 		y : pos.y
 	};
 	this.translation = {
-		x : (window.innerWidth / 2 - canvas.width / 2) + this.center.x,
+		x : (window.innerWidth / 3 - canvas.width / 3) + this.center.x,
 		y : this.center.y
   };
 }
@@ -102,7 +102,7 @@ init();
 
 
 
-//header type
+//header typewritter
 
 var _CONTENT = [ "Explode", "Blow up", "Detonate", "Boom" ];
 
