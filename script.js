@@ -1,4 +1,3 @@
-
 //#region active class for navigation
 
 let navLink = document.querySelectorAll(".nav-link")
@@ -16,91 +15,91 @@ navLink.forEach( a =>{
 //#region Logo eyes
 //Logo eyes
 
-window.requestAnimFrame = (function() {
-				return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
-  function(callback) {
-	  window.setTimeout(callback, 1000 / 60);
-	};
-})();
+// window.requestAnimFrame = (function() {
+// 				return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+//   function(callback) {
+// 	  window.setTimeout(callback, 1000 / 60);
+// 	};
+// })();
 
-var ctx,
-    WIDTH,
-    HEIGHT,
-    leftEye,
-    rightEye,
-    mouse,
+// var ctx,
+//     WIDTH,
+//     HEIGHT,
+//     leftEye,
+//     rightEye,
+//     mouse,
 
-Eye = function(pos) {
-  this.pos = {
-		x : pos.x,
-		y : pos.y
-	};
-	this.center = {
-		x : pos.x,
-		y : pos.y
-	};
-	this.translation = {
-		x : (window.innerWidth / 3 - canvas.width / 3) + this.center.x,
-		y : this.center.y
-  };
-}
+// Eye = function(pos) {
+//   	this.pos = {
+// 		x : pos.x,
+// 		y : pos.y
+// 	};
+// 	this.center = {
+// 		x : pos.x,
+// 		y : pos.y
+// 	};
+// 	this.translation = {
+// 		x : (window.innerWidth / 3 - canvas.width / 3) + this.center.x,
+// 		y : this.center.y
+//   };
+// }
 
-Eye.prototype.draw = function() {
-  ctx.beginPath();
-	ctx.arc(this.pos.x, this.pos.y, 3, 0, Math.PI * 2);
-	ctx.fillStyle = '#333';
-	ctx.fill();
-}
+// Eye.prototype.draw = function() {
+//   	ctx.beginPath();
+// 	ctx.arc(this.pos.x, this.pos.y, 3, 0, Math.PI * 2);
+// 	ctx.fillStyle = '#333';
+// 	ctx.fill();
+// }
 
-Eye.prototype.update = function() {
-	var deltaX = mouse.x - this.translation.x;
-	var deltaY = mouse.y - this.translation.y;
-	var mag = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-	var angleRad = Math.atan2(deltaY, deltaX);
-	var newPosX = this.center.x + 6 * Math.cos(angleRad);
-	var newPosY = this.center.y + 11 * Math.sin(angleRad);
-	this.pos.x += (newPosX - this.pos.x) / 5;
-	this.pos.y += (newPosY - this.pos.y) / 5;
-}
+// Eye.prototype.update = function() {
+// 	var deltaX = mouse.x - this.translation.x;
+// 	var deltaY = mouse.y - this.translation.y;
+// 	var mag = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+// 	var angleRad = Math.atan2(deltaY, deltaX);
+// 	var newPosX = this.center.x + 6 * Math.cos(angleRad);
+// 	var newPosY = this.center.y + 11 * Math.sin(angleRad);
+// 	this.pos.x += (newPosX - this.pos.x) / 5;
+// 	this.pos.y += (newPosY - this.pos.y) / 5;
+// }
 			
-var init = function() {
-  var canvas = document.getElementById('canvas');
-	ctx = canvas.getContext('2d');
-	canvas.width = WIDTH = 750;
-	canvas.height = HEIGHT = 85;
-	leftEye = new Eye({
-	  x : WIDTH / 2 - 14,
-		y : HEIGHT / 2 + 18
-	});
-	rightEye = new Eye({
-		x : WIDTH / 2 + 8,
-		y : HEIGHT / 2 + 18
-	});
-	mouse = {
-		x : 0,
-		y : 0
-	};
-	bindEventHandlers();
-	draw();
-}
+// var init = function() {
+//   var canvas = document.getElementById('canvas');
+// 	ctx = canvas.getContext('2d');
+// 	canvas.width = WIDTH = 750;
+// 	canvas.height = HEIGHT = 85;
+// 	leftEye = new Eye({
+// 	  	x : WIDTH / 2 - 14,
+// 		y : HEIGHT / 2 + 18
+// 	});
+// 	rightEye = new Eye({
+// 		x : WIDTH / 2 + 8,
+// 		y : HEIGHT / 2 + 18
+// 	});
+// 	mouse = {
+// 		x : 0,
+// 		y : 0
+// 	};
+// 	bindEventHandlers();
+// 	draw();
+// }
     
-var draw = function() {
-  ctx.clearRect(0, 0, WIDTH, HEIGHT);
-	leftEye.update();
-	rightEye.update();
-	leftEye.draw();
-	rightEye.draw();
-  requestAnimFrame(draw);
-}
+// var draw = function() {
+//   	ctx.clearRect(0, 0, WIDTH, HEIGHT);
+// 	leftEye.update();
+// 	rightEye.update();
+// 	leftEye.draw();
+// 	rightEye.draw();
+//   	requestAnimFrame(draw);
+// }
     
-var bindEventHandlers = function() {
-  document.onmousemove = function(e) {
-	  mouse.x = e.pageX;
-		mouse.y = e.pageY;
-	}
-}
+// var bindEventHandlers = function() {
+//   	document.onmousemove = function(e) {
+// 	  	mouse.x = e.pageX;
+// 		mouse.y = e.pageY;
+// 	}
+// }
 
-init();
+// init();
 
 //#endregion
 
@@ -209,63 +208,89 @@ _INTERVAL_VAL = setInterval(Type, 150);
 		}
 	  }, 0);
   })();
+
+
   
   //#endregion
 
 
 
+//#region book API
 
-const API_URL = 'https://www.googleapis.com/books/v1/volumes?q=time&printType=books&key=AIzaSyB6UbkiRzJpKT26g1WLRTiBjDl0J90SCe0'
-// const IMG_PATH = ''
-// const SEARCH_URL = 'https://www.googleapis.com/books/v1/volumes?q=search+terms'
 
+
+async function boooks(){
+	const books = await fetch("https://www.googleapis.com/books/v1/volumes?q=time&printType=books&key=AIzaSyB6UbkiRzJpKT26g1WLRTiBjDl0J90SCe0")
+	const objOfBooks = await books.json()
+	const mzaObieqti = []
+	console.log(objOfBooks)
+	objOfBooks.items.forEach(book => {
+		// title
+		let title = book.volumeInfo.title
+		console.log(title)
+		// authors
+		let authors = book.volumeInfo.authors
+		if(book.volumeInfo.authors == undefined){
+			authors = book.volumeInfo.publisher
+		}
+		console.log(authors)
+		// publishedDate
+		let publishedDate = book.volumeInfo.publishedDate
+		if(book.volumeInfo.publishedDate == undefined){
+			publishedDate = 1997
+		}
+		try {
+			publishedDate = publishedDate.split("-")[0]
+		} catch {
+			publishedDate = publishedDate
+		}
+		console.log(publishedDate)
+		// images
+		let image = book.volumeInfo.imageLinks.thumbnail
+		console.log(image)
+		const droebitiObieqti = {
+			"title": title,
+			"image": image,
+			"authors": authors,
+			"publishedDate": publishedDate
+		}
+		mzaObieqti.push(droebitiObieqti)
+	});
+	showBooks(mzaObieqti)
+}
+
+boooks()
 
 const main = document.getElementById('main')
 
-getBooks(API_URL)
-
-
-async function getBooks(url) {
-	const res = await fetch(url)
-	const data = await res.json()
-
-	showBooks(data)
-}
-
 function showBooks(books) {
-	main.innerHTML = ''
+	main.innerHTML = '';
 
 	books.forEach((book) => {
-		const { title, poster_path, vote_average, overview} = book
+		const { title, image, authors, publishedDate} = book
 
-		const bookEl = document.createElement
-		('div')
+		const bookEl = document.createElement('div')
 		bookEl.classList.add('book')
 
 		bookEl.innerHTML = `
+
           <img
-            src="${IMG_PATH + poster_path}"
+            src="${image}"
 			alt = "${title}"
           />
           <div class="book-info">
-            <span class="${getClassByRate(vote_average)}">${vote_average}</span>
-            <h3>${title}</h3>
+		  <h3 class="title">${title}</h3>
+            <span class="authors">${authors}</span>
+			<span class="publishedDate">${publishedDate}</span>
           </div>
-          <div class="overview">
-            <h3>overview</h3>
-			${overview}
-          </div>
+		  <div class="overview">
+          <h3>Book Title:</h3>
+          ${title}
+        </div>
+
 		`
+
 		main.appendChild(bookEl)
 	})
 }
-
-function getClassByRate (vote) {
-	if(vote >= 8) {
-		return 'green'
-	} else if(vote >=5) {
-		return 'orange'
-	} else {
-		return 'red'
-	}
-}
+//#endregion
