@@ -75,11 +75,18 @@ i {
   color: rgba(43, 45, 66, 1);
   width: 16px;
   height: 16px;
+  transition: all .2s ease-in-out;
+
 }
 
 i:hover {
   color: rgba(239, 35, 60, 1);
+  transform: scale(1.1);
   cursor: pointer;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
 /* მაპი */
@@ -668,12 +675,10 @@ ol {
   vertical-align: baseline;
 }
 
-
-
 .subscribe {
   margin-top: 120px;
   height: 340px;
-  background: #EDF2F4;
+  background: #edf2f4;
   border-radius: 10px;
 }
 
@@ -688,69 +693,119 @@ ol {
   border: none;
   margin-left: 180px;
   border-radius: 10px;
-
 }
 
 .subscribe-input::placeholder {
   padding-left: 20px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
-  color: #2B2D42;
+  color: #2b2d42;
   opacity: 0.4;
 }
 
 .btn1 {
   width: 133px;
   height: 60px;
-  background: #EF233C;
+  background: #ef233c;
   border-radius: 10px;
   border: none;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-left: -20px;
-  }
+}
 
-  .footer {
-    height: 300px;
-  }
+.footer {
+  height: 300px;
+}
 
-  .nav {
-    display: flex;
+.nav {
+  display: flex;
   justify-content: start;
   text-align: center;
-  }
+}
 
-  .nav-links {
-    list-style: none;
-    padding-left: 50px;
-    padding-top: 10px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
-    color: #2B2D42;
-    opacity: 0.6;
-  }
+.nav-links {
+  list-style: none;
+  padding-left: 50px;
+  padding-top: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #2b2d42;
+  opacity: 0.6;
+  transition: transform 1.5 ease-in;
+}
 
-  
+.nav-links {
+  translate: 1.5 ease;
+}
+
+.book-title {
+  margin-top: 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: #2b2d42;
+}
+
+a:hover {
+  color: #2b2d42;
+}
+
+a:focus {
+  color: #2b2d42;
+}
+
+.menu-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  cursor: pointer;
+  width: 60px;
+  margin-top: 4px;
+  margin-left: 4px;
+}
+
+.nav-btns{
+ list-style: none;
+ position: fixed;
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+ transition: transform 1000ms;
+ margin-left: -40px;
+ margin-top: 10px;
+ background-color: #fff;
+ border: 1px solid #fff;
+ border-radius: 10px;
+ -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ -ms-border-radius: 10px;
+ -o-border-radius: 10px;
+}
+
+.nav-icons {
+  padding: 10px;
+  margin-top: 4px;
+  color: #00000040;
+}
+
+.nav-icons:hover {
+  color: #2b2d42;
+}
 
 
 
 
-  .book-title {
-    margin-top: 20px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 21px;
-    color: #2B2D42;
-  }
