@@ -234,17 +234,17 @@ async function boooks(){
 			authors = book.volumeInfo.publisher
 		}
 		console.log(authors)
-		// publishedDate
-		let publishedDate = book.volumeInfo.publishedDate
-		if(book.volumeInfo.publishedDate == undefined){
-			publishedDate = 1997
-		}
-		try {
-			publishedDate = publishedDate.split("-")[0]
-		} catch {
-			publishedDate = publishedDate
-		}
-		console.log(publishedDate)
+		// // publishedDate
+		// let publishedDate = book.volumeInfo.publishedDate
+		// if(book.volumeInfo.publishedDate == undefined){
+		// 	publishedDate = 1997
+		// }
+		// try {
+		// 	publishedDate = publishedDate.split("-")[0]
+		// } catch {
+		// 	publishedDate = publishedDate
+		// }
+		// console.log(publishedDate)
 		// images
 		let image = book.volumeInfo.imageLinks.thumbnail
 		console.log(image)
@@ -252,7 +252,7 @@ async function boooks(){
 			"title": title,
 			"image": image,
 			"authors": authors,
-			"publishedDate": publishedDate
+			// "publishedDate": publishedDate
 		}
 		mzaObieqti.push(droebitiObieqti)
 	});
@@ -267,25 +267,24 @@ function showBooks(books) {
 	main.innerHTML = '';
 
 	books.forEach((book) => {
-		const { title, image, authors, publishedDate} = book
+		const { title, image, authors} = book
 
 		const bookEl = document.createElement('div')
 		bookEl.classList.add('book')
 
 		bookEl.innerHTML = `
 
-          <img
+          <a href="https://en.wikipedia.org/wiki/Book" target="_blank""><img
             src="${image}"
 			alt = "${title}"
-          />
+          /></a>
           <div class="book-info">
 		  <h3 class="title">${title}</h3>
-            <span class="authors">${authors}</span>
-			<span class="publishedDate">${publishedDate}</span>
+            <span class="authors">${title}</span>
           </div>
 		  <div class="overview">
-          <h3>Book Title:</h3>
-          ${title}
+          <h3></h3>
+          ${authors}
         </div>
 
 		`
