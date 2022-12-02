@@ -8,6 +8,8 @@ body {
   overflow-x: hidden;
 }
 
+/*header*/
+
 header {
   position: fixed;
   top: 0;
@@ -51,6 +53,53 @@ header.active {
   left: 0;
 } */
 
+
+.eyes {
+  position: absolute;
+  margin-top: 16px;
+  transform: translateY(-50%);
+  margin-left: 44px;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.eye {
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  display: inline-block;
+  margin: 2px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.ball {
+  width: 6px;
+  height: 6px;
+  background-color: #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
 /* ციმციმა დეტონატორი */
 
 .live-indicator-block {
@@ -83,7 +132,7 @@ header.active {
 }
 
 .blink {
-  color: red;
+  color: #ef233c;
   margin-left: -4px;
   padding-right: 10px;
   margin-left: 10px;
@@ -880,8 +929,8 @@ a:focus {
 }
 
 .modal-img {
-  width: 480px;
-  height: 624px;
+  width: 580px;
+  height: 724px;
   border-radius: 14px;
   margin-top: 20px;
 }
@@ -910,6 +959,59 @@ a:focus {
   color: #1b1a27;
 }
 
+.red-btn {
+  position: absolute;
+  right: 420px;
+  bottom: 60px;
+  width: 180px;
+  height: 37px;
+  background: #ef233c;
+  border-radius: 4px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.gray-btn {
+  position: absolute;
+  bottom: 60px;
+  right: 220px;
+  width: 180px;
+  height: 37px;
+  background: #8d99ae;
+  border-radius: 4px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.modal-a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #2b2d42;
+  position: absolute;
+  bottom: 20px;
+  right: 420px;
+}
+
+.red-btn:hover,
+.gray-btn:hover {
+  transform: scale(1.1);
+}
+
 .modal-desc {
   position: absolute;
   width: 580px;
@@ -924,7 +1026,6 @@ a:focus {
   color: #2b2d42;
 }
 
-
 .dropbtn {
   background-color: transparent;
   color: white;
@@ -934,11 +1035,11 @@ a:focus {
 }
 
 .icon-btn {
-  transition: transform .7s ease-in-out;
-  -webkit-transition: transform .7s ease-in-out;
-  -moz-transition: transform .7s ease-in-out;
-  -ms-transition: transform .7s ease-in-out;
-  -o-transition: transform .7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+  -webkit-transition: transform 0.7s ease-in-out;
+  -moz-transition: transform 0.7s ease-in-out;
+  -ms-transition: transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out;
   margin-left: -10px;
 }
 
@@ -973,7 +1074,7 @@ a:focus {
 }
 
 .dropdown-content a:hover {
- color: #1b1a27;
+  color: #1b1a27;
 }
 
 .dropdown:hover .dropdown-content {
@@ -982,4 +1083,57 @@ a:focus {
 
 .dropdown:hover .dropbtn {
   background-color: transparent;
+}
+
+
+
+@media only screen and (max-width: 576px) {
+  .eyes {
+    display: none;
+  }
+
+  .live-indicator-block {
+    display: none;
+  }
+
+  .user-icon{
+    display: none;
+  }
+
+  .cart-icon{
+    display: none;
+  }
+
+  .nav {
+    position:relative;
+    left: 360px;
+    margin-top: -20px;
+  }
+
+  .dropdown {
+    margin-left: -100x;
+  }
+
+  .map {
+    display: none;
+  }
+
+  .map-btn {
+    display: none;
+  }
+
+  .banner {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .nav-bar {
+    display: none;
+  }
+
+  #img, .img {
+    width: 150px;
+    height: 200px;
+  }
+
 }

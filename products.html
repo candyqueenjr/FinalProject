@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- ნავიგაცია -->
+    <header class="header">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-2">
+                    <!-- <canvas id="canvas"></canvas> -->
+                    <img class="logo" src="src/img/logo.svg" alt="logo" />
+                </div>
+                <div class="col-9">
+                    <div class="live-indicator-block">
+                        <span class="live-indicator">
+                <i class="fa fa-circle blink" aria-hidden="true"></i>233
+                Detonators
+              </span>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="row">
+                        <div class="col-4">
+                            <i class="fa-regular fa-circle-user"></i>
+                        </div>
+                        <div class="col-4">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="col-4">
+                            <div class="nav">
+                                <div class="dropdown">
+                                    <a class="dropbtn"><i class="fa-solid fa-minus icon-btn"></i></a>
+                                    <div class="dropdown-content">
+                                        <a href="index.html">Home</a>
+                                        <a href="#">Wishlist</a>
+                                        <a href="products.html">Products</a>
+                                        <a href="#">Contact Us</a>
+                                    </div>
+                                </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="container mt-230">
+        <div class="row">
+            <main id="main"></main>
+        </div>
+        <div class="row">
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content" id="modal-content">
+                    <span class="close">&times;</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="container mt-200">
+        <div class="row">
+            <div class="col-1 footer-logo">
+                <img src="src/img/logo.png" alt="" />
+            </div>
+            <div class="col-5">
+                <h2 class="header-txt">
+                    Keep your mind and side <br />
+              full of content
+                </h2>
+            </div>
+            <div class="col-3">
+                <ul class="nav">
+                    <a href="index.html" class="nav-links">
+                        <li>Home</li>
+                    </a>
+                    <a href="" class="nav-links">
+                        <li>Wishlist</li>
+                    </a>
+                    <a href="" class="nav-links">
+                        <li>Products</li>
+                    </a>
+                    <a href="" class="nav-links">
+                        <li>ContactUs</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-3">
+                <ul class="nav">
+                    <a href="https://www.behance.net/" class="nav-links">
+                        <li>Behance</li>
+                    </a>
+                    <a href="https://www.linkedin.com/feed/" class="nav-links">
+                        <li>Linkedin</li>
+                    </a>
+                    <a href="https://dribbble.com/" class="nav-links">
+                        <li>Dribble</li>
+                    </a>
+                    <a href="https://www.facebook.com/" class="nav-links">
+                        <li>Facebook</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-6 nav-links">
+                <span>© 2013-2022 - Boombook</span>
+            </div>
+            <div class="col-6">
+                <ul class="nav">
+                    <a href="" class="nav-links">
+                        <li>Privacy Policy</li>
+                    </a>
+                    <a href="" class="nav-links">
+                        <li>Cookie policy</li>
+                    </a>
+                    <a href="" class="nav-links">
+                        <li>Terms & conditions</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <hr />
+    </footer>
+    <!--js-->
+    <script src="script.js"></script>
+</body>
+
+</html>

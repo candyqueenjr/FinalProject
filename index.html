@@ -1,608 +1,621 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <link rel="stylesheet" href="src/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
-  </head>
-  <body>
-    
+</head>
+
+<body>
+
     <!-- ნავიგაცია -->
     <header class="header">
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-2">
-            <!-- <canvas id="canvas"></canvas> -->
-            <img class="logo" src="src/img/logo.svg" alt="logo" />
-          </div>
-          <div class="col-9">
-            <div class="live-indicator-block">
-              <span class="live-indicator">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-3 col-lg-2 col-md-3">
+                  <div class="eyes">
+                    <div class="eye">
+                      <div class="ball"></div>
+                    </div>
+                    <div class="eye">
+                      <div class="ball"></div>
+                    </div>
+                  </div>
+                    <!-- <canvas id="canvas"></canvas> -->
+                    <img class="logo" src="src/img/logo.svg" alt="logo" />
+                </div>
+                <div class="col-md-7 col-lg-9">
+                    <div class="live-indicator-block">
+                        <span class="live-indicator">
                 <i class="fa fa-circle blink" aria-hidden="true"></i>233
                 Detonators
               </span>
-            </div>
-          </div>
-          <div class="col-1">
-            <div class="row">
-              <div class="col-4">
-                <i class="fa-regular fa-circle-user"></i>
-              </div>
-              <div class="col-4">
-                <i class="fa-solid fa-cart-shopping"></i>
-              </div>
-              <div class="col-4">
-                <div class="nav">
-                  <div class="dropdown">
-                    <a class="dropbtn"><i class="fa-solid fa-minus icon-btn"></i></a>
-                    <div class="dropdown-content">
-                      <a href="#">Home</a>
-                      <a href="#">Wishlist</a>
-                      <a href="#">Products</a>
-                      <a href="#">Contact Us</a>
                     </div>
-                  </div>
-                </nav>
                 </div>
-              </div>
+                <div class="col-6 col-md-3 col-lg-1">
+                    <div class="row">
+                        <div class="col-4 user-icon">
+                            <i class="fa-regular fa-circle-user "></i>
+                        </div>
+                        <div class="col-4 cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="col-4">
+                            <div class="nav">
+                                <div class="dropdown">
+                                    <a class="dropbtn"><i class="fa-solid fa-bars-staggered"></i></a>
+                                    <div class="dropdown-content">
+                                        <a href="#">Home</a>
+                                        <a href="#">Wishlist</a>
+                                        <a href="products.html">Products</a>
+                                        <a href="#">Contact Us</a>
+                                    </div>
+                                </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </header>
-   
+
     <!-- მაპი/ბანერი -->
     <section class="container mt-100">
-      <div class="row">
-        <div class="col-4 mt-230">
-          <p class="banner-txt">Best book store</p>
-          <h1 class="header-txt">
-            We <span class="color-red" id="text"></span> your books
-          </h1>
-          <h4 class="color-black mt-4">Challange yourself</h4>
-          <div class="row mt-130">
-            <ul class="nav-bar">
-              <li class="nav-link">Behance</li>
-              <li class="nav-link">Dribble</li>
-              <li class="nav-link">Linkedin</li>
-              <li class="nav-link">Facebook</li>
-            </ul>
-          </div>
-          <div class="scroll mt-5">
-            <img src="src/img/Vector.svg" alt="vector" />
-            <a href="#images">Scroll down</a>
-          </div>
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-4 mt-230 banner">
+                <p class="banner-txt">Best book store</p>
+                <h1 class="header-txt">
+                    We <span class="color-red" id="text"></span> your books
+                </h1>
+                <h4 class="color-black mt-4">Challange yourself</h4>
+                <div class="row mt-130">
+                    <ul class="nav-bar">
+                        <li class="nav-link">Behance</li>
+                        <li class="nav-link">Dribble</li>
+                        <li class="nav-link">Linkedin</li>
+                        <li class="nav-link">Facebook</li>
+                    </ul>
+                </div>
+                <div class="scroll mt-5">
+                    <img src="src/img/Vector.svg" alt="vector" />
+                    <a href="#images">Scroll down</a>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-8">
+                <div class="map">
+                    <iframe src="https://snazzymaps.com/embed/440166" width="100%" height="600px"
+                        style="border: none"></iframe>
+                </div>
+                <a class="map-btn">Explore map</a>
+            </div>
         </div>
-        <div class="col-8">
-          <div class="map">
-            <iframe
-              src="https://snazzymaps.com/embed/440166"
-              width="100%"
-              height="600px"
-              style="border: none"
-            ></iframe>
-          </div>
-          <a class="map-btn">Explore map</a>
-        </div>
-      </div>
     </section>
     <!-- სურათების კარუსელი -->
     <section class="img-container mt-230" id="logos-home-page">
-      <div class="slider" id="images">
-        <div class="left slide-track">
-          <div class="slide">
-            <img id="img" src="src/img/alexandre.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/abasheli.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/amirejibi.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/baratashvili.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/barnovi.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/chonkadze.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/dochanashvili.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/dumbadze.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/alexandre.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/abasheli.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/amirejibi.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/baratashvili.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/barnovi.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/chonkadze.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/dochanashvili.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/dumbadze.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/alexandre.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/abasheli.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/amirejibi.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/baratashvili.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/barnovi.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/chonkadze.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/dochanashvili.png" alt="" />
-          </div>
-          <div class="slide">
-            <img id="img" src="src/img/dumbadze.png" alt="" />
-          </div>
+        <div class="slider" id="images">
+            <div class="left slide-track">
+                <div class="slide">
+                    <img id="img" src="src/img/alexandre.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/abasheli.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/amirejibi.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/baratashvili.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/barnovi.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/chonkadze.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/dochanashvili.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/dumbadze.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/alexandre.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/abasheli.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/amirejibi.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/baratashvili.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/barnovi.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/chonkadze.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/dochanashvili.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/dumbadze.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/alexandre.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/abasheli.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/amirejibi.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/baratashvili.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/barnovi.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/chonkadze.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/dochanashvili.png" alt="" />
+                </div>
+                <div class="slide">
+                    <img id="img" src="src/img/dumbadze.png" alt="" />
+                </div>
+            </div>
+            <div class="right slide-track2 mt-4">
+                <div class="slide2">
+                    <img class="img" src="src/img/ekvtimeshvili.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/gabashvili.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/gala.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/gamsaxurdia.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/iakob.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/iliko.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/javakhishvili.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/robakidze.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/shota.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/ekvtimeshvili.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/gabashvili.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/gala.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/gamsaxurdia.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/iakob.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/iliko.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/javakhishvili.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/robakidze.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/shota.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/ekvtimeshvili.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/gabashvili.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/gala.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/gamsaxurdia.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/iakob.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/iliko.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/javakhishvili.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/robakidze.png" alt="" />
+                </div>
+                <div class="slide2">
+                    <img class="img" src="src/img/shota.png" alt="" />
+                </div>
+            </div>
         </div>
-        <div class="right slide-track2 mt-4">
-          <div class="slide2">
-            <img class="img" src="src/img/ekvtimeshvili.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/gabashvili.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/gala.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/gamsaxurdia.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/iakob.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/iliko.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/javakhishvili.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/robakidze.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/shota.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/ekvtimeshvili.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/gabashvili.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/gala.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/gamsaxurdia.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/iakob.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/iliko.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/javakhishvili.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/robakidze.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/shota.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/ekvtimeshvili.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/gabashvili.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/gala.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/gamsaxurdia.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/iakob.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/iliko.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/javakhishvili.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/robakidze.png" alt="" />
-          </div>
-          <div class="slide2">
-            <img class="img" src="src/img/shota.png" alt="" />
-          </div>
-        </div>
-      </div>
     </section>
     <!-- ტაიმერი -->
     <section class="container">
-      <div class="row">
-        <div class="col-6 mt-230">
-          <h2 class="header-txt">Daily Free Defusable book’s</h2>
-          <p class="banner-txt">
-            Welcome to Book Depository! We have more than 5 million
-            <br />
+        <div class="row">
+            <div class="col-6 mt-230">
+                <h2 class="header-txt">Daily Free Defusable book’s</h2>
+                <p class="banner-txt">
+                    Welcome to Book Depository! We have more than 5 million
+                    <br />
             titles and free PDF books for worldwide to over 120 countries.
-          </p>
+                </p>
+            </div>
+            <div class="col-6 mt-200">
+                <h1 id="headline"></h1>
+                <div id="countdown">
+                    <ul>
+                        <li class="timer"><span id="days" class="date"></span>DAY</li>
+                        <li class="timer"><span id="hours" class="date"></span>HR</li>
+                        <li class="timer"><span id="minutes" class="date"></span>MIN</li>
+                        <li class="timer"><span id="seconds" class="date"></span>SEC</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="col-6 mt-200">
-          <h1 id="headline"></h1>
-          <div id="countdown">
-            <ul>
-              <li class="timer"><span id="days" class="date"></span>DAY</li>
-              <li class="timer"><span id="hours" class="date"></span>HR</li>
-              <li class="timer"><span id="minutes" class="date"></span>MIN</li>
-              <li class="timer"><span id="seconds" class="date"></span>SEC</li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </section>
     <!-- წიგნები -->
     <section class="container mt-5">
-      <div class="row">
-        <main id="main"></main>
-      </div>
-    <div class="row">
-      <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content" id="modal-content">
-          <span class="close">&times;</span>
+        <div class="row">
+            <main id="main"></main>
         </div>
-      
-      </div>
+        <div class="row">
+            <div id="myModal" class="modal">
 
-    </div>
+                <!-- Modal content -->
+                <div class="modal-content" id="modal-content">
+                    <span class="close">&times;</span>
+                </div>
+
+            </div>
+
+        </div>
     </section>
     <!--customers-->
     <section class="container mt-100">
-      <div class="row">
-        <div class="col-6">
-          <h2 class="header-txt">This month top heroes</h2>
-          <p class="banner-txt">
-            Welcome to Book Depository! We have more than 5 million titles and
-            free delivery <br />
+        <div class="row">
+            <div class="col-6">
+                <h2 class="header-txt">This month top heroes</h2>
+                <p class="banner-txt">
+                    Welcome to Book Depository! We have more than 5 million titles and
+                    free delivery <br />
             worldwide to over 120 countries. We also really, really love books.
-          </p>
+                </p>
+            </div>
+            <div class="col-6">
+                <div class="left">
+                    <img class="people" src="/src/img/0.png" alt="" />
+                    <img class="people" src="/src/img/1.png" alt="" />
+                    <img class="people" src="/src/img/2.png" alt="" />
+                    <img class="people" src="/src/img/3.png" alt="" />
+                    <img class="people" src="/src/img/4.png" alt="" />
+                    <img class="people" src="/src/img/5.png" alt="" />
+                    <img class="people" src="/src/img/6.png" alt="" />
+                    <img class="people" src="/src/img/7.png" alt="" />
+                    <br />
+                    <img class="people" src="/src/img/8.png" alt="" />
+                    <img class="people" src="/src/img/9.png" alt="" />
+                    <img class="people" src="/src/img/10.png" alt="" />
+                    <img class="people" src="/src/img/11.png" alt="" />
+                    <img class="people" src="/src/img/12.png" alt="" />
+                    <img class="people" src="/src/img/13.png" alt="" />
+                    <img class="people" src="/src/img/14.png" alt="" />
+                    <img class="people" src="/src/img/15.png" alt="" />
+                </div>
+            </div>
         </div>
-        <div class="col-6">
-          <div class="left">
-            <img class="people" src="/src/img/0.png" alt="" />
-            <img class="people" src="/src/img/1.png" alt="" />
-            <img class="people" src="/src/img/2.png" alt="" />
-            <img class="people" src="/src/img/3.png" alt="" />
-            <img class="people" src="/src/img/4.png" alt="" />
-            <img class="people" src="/src/img/5.png" alt="" />
-            <img class="people" src="/src/img/6.png" alt="" />
-            <img class="people" src="/src/img/7.png" alt="" />
-            <br />
-            <img class="people" src="/src/img/8.png" alt="" />
-            <img class="people" src="/src/img/9.png" alt="" />
-            <img class="people" src="/src/img/10.png" alt="" />
-            <img class="people" src="/src/img/11.png" alt="" />
-            <img class="people" src="/src/img/12.png" alt="" />
-            <img class="people" src="/src/img/13.png" alt="" />
-            <img class="people" src="/src/img/14.png" alt="" />
-            <img class="people" src="/src/img/15.png" alt="" />
-          </div>
-        </div>
-      </div>
     </section>
     <section class="container mt-100">
-      <div class="row active-people">
-        <ol class="d-flex">
-          <div class="box">
-            <li class="readers">
-              <img class="person" src="src/img/active.png" alt="" />
-              <h5 class="name">Sulkhan Kvernadze</h5>
-              <div class="cimcima">
-                <span class="live-indicator cimcima2">
+        <div class="row active-people">
+            <ol class="d-flex">
+                <div class="box">
+                    <li class="readers">
+                        <img class="person" src="src/img/active.png" alt="" />
+                        <h5 class="name">Sulkhan Kvernadze</h5>
+                        <div class="cimcima">
+                            <span class="live-indicator cimcima2">
                   <i class="fa fa-circle blink" aria-hidden="true"></i>Active
                 </span>
-              </div>
-              <br />
-              <span class="user-title">Book worm</span>
-              <br />
-              <a class="preview">Preview</a>
-              <a class="books">12 books</a>
-            </li>
-          </div>
-          <div class="box">
-            <li class="readers">
-              <img class="person" src="src/img/active.png" alt="" />
-              <h5 class="name">Sulkhan Kvernadze</h5>
-              <div class="cimcima">
-                <span class="live-indicator cimcima2">
+                        </div>
+                        <br />
+                        <span class="user-title">Book worm</span>
+                        <br />
+                        <a class="preview">Preview</a>
+                        <a class="books">12 books</a>
+                    </li>
+                </div>
+                <div class="box">
+                    <li class="readers">
+                        <img class="person" src="src/img/active.png" alt="" />
+                        <h5 class="name">Sulkhan Kvernadze</h5>
+                        <div class="cimcima">
+                            <span class="live-indicator cimcima2">
                   <i class="fa fa-circle blink" aria-hidden="true"></i>Active
                 </span>
-              </div>
-              <br />
-              <span class="user-title">Book worm</span>
-              <br />
-              <a class="preview">Preview</a>
-              <a class="books">12 books</a>
-            </li>
-          </div>
-          <div class="box">
-            <li class="readers">
-              <img class="person" src="src/img/active.png" alt="" />
-              <h5 class="name">Sulkhan Kvernadze</h5>
-              <div class="cimcima">
-                <span class="live-indicator cimcima2">
+                        </div>
+                        <br />
+                        <span class="user-title">Book worm</span>
+                        <br />
+                        <a class="preview">Preview</a>
+                        <a class="books">12 books</a>
+                    </li>
+                </div>
+                <div class="box">
+                    <li class="readers">
+                        <img class="person" src="src/img/active.png" alt="" />
+                        <h5 class="name">Sulkhan Kvernadze</h5>
+                        <div class="cimcima">
+                            <span class="live-indicator cimcima2">
                   <i class="fa fa-circle blink" aria-hidden="true"></i>Active
                 </span>
-              </div>
-              <br />
-              <span class="user-title">Book worm</span>
-              <br />
-              <a class="preview">Preview</a>
-              <a class="books">12 books</a>
-            </li>
-          </div>
+                        </div>
+                        <br />
+                        <span class="user-title">Book worm</span>
+                        <br />
+                        <a class="preview">Preview</a>
+                        <a class="books">12 books</a>
+                    </li>
+                </div>
 
-          <div class="box">
-            <li class="readers">
-              <img class="person" src="src/img/active.png" alt="" />
-              <h5 class="name">Sulkhan Kvernadze</h5>
-              <div class="cimcima">
-                <span class="live-indicator cimcima2">
+                <div class="box">
+                    <li class="readers">
+                        <img class="person" src="src/img/active.png" alt="" />
+                        <h5 class="name">Sulkhan Kvernadze</h5>
+                        <div class="cimcima">
+                            <span class="live-indicator cimcima2">
                   <i class="fa fa-circle blink" aria-hidden="true"></i>Active
                 </span>
-              </div>
-              <br />
-              <span class="user-title">Book worm</span>
-              <br />
-              <a class="preview">Preview</a>
-              <a class="books">12 books</a>
-            </li>
-          </div>
+                        </div>
+                        <br />
+                        <span class="user-title">Book worm</span>
+                        <br />
+                        <a class="preview">Preview</a>
+                        <a class="books">12 books</a>
+                    </li>
+                </div>
 
-          <div class="box">
-            <li class="readers">
-              <img class="person" src="src/img/active.png" alt="" />
-              <h5 class="name">Sulkhan Kvernadze</h5>
-              <div class="cimcima">
-                <span class="live-indicator cimcima2">
+                <div class="box">
+                    <li class="readers">
+                        <img class="person" src="src/img/active.png" alt="" />
+                        <h5 class="name">Sulkhan Kvernadze</h5>
+                        <div class="cimcima">
+                            <span class="live-indicator cimcima2">
                   <i class="fa fa-circle blink" aria-hidden="true"></i>Active
                 </span>
-              </div>
-              <br />
-              <span class="user-title">Book worm</span>
-              <br />
-              <a class="preview">Preview</a>
-              <a class="books">12 books</a>
-            </li>
-          </div>
+                        </div>
+                        <br />
+                        <span class="user-title">Book worm</span>
+                        <br />
+                        <a class="preview">Preview</a>
+                        <a class="books">12 books</a>
+                    </li>
+                </div>
 
-          <div class="box">
-            <li class="readers">
-              <img class="person" src="src/img/active.png" alt="" />
-              <h5 class="name">Sulkhan Kvernadze</h5>
-              <div class="cimcima">
-                <span class="live-indicator cimcima2">
+                <div class="box">
+                    <li class="readers">
+                        <img class="person" src="src/img/active.png" alt="" />
+                        <h5 class="name">Sulkhan Kvernadze</h5>
+                        <div class="cimcima">
+                            <span class="live-indicator cimcima2">
                   <i class="fa fa-circle blink" aria-hidden="true"></i>Active
                 </span>
-              </div>
-              <br />
-              <span class="user-title">Book worm</span>
-              <br />
-              <a class="preview">Preview</a>
-              <a class="books">12 books</a>
-            </li>
-          </div>
+                        </div>
+                        <br />
+                        <span class="user-title">Book worm</span>
+                        <br />
+                        <a class="preview">Preview</a>
+                        <a class="books">12 books</a>
+                    </li>
+                </div>
 
-          <div class="box">
-            <li class="readers">
-              <img class="person" src="src/img/active.png" alt="" />
-              <h5 class="name">Sulkhan Kvernadze</h5>
-              <div class="cimcima">
-                <span class="live-indicator cimcima2">
+                <div class="box">
+                    <li class="readers">
+                        <img class="person" src="src/img/active.png" alt="" />
+                        <h5 class="name">Sulkhan Kvernadze</h5>
+                        <div class="cimcima">
+                            <span class="live-indicator cimcima2">
                   <i class="fa fa-circle blink" aria-hidden="true"></i>Active
                 </span>
-              </div>
-              <br />
-              <span class="user-title">Book worm</span>
-              <br />
-              <a class="preview">Preview</a>
-              <a class="books">12 books</a>
-            </li>
-          </div>
+                        </div>
+                        <br />
+                        <span class="user-title">Book worm</span>
+                        <br />
+                        <a class="preview">Preview</a>
+                        <a class="books">12 books</a>
+                    </li>
+                </div>
 
-          <div class="box">
-            <li class="readers">
-              <img class="person" src="src/img/active.png" alt="" />
-              <h5 class="name">Sulkhan Kvernadze</h5>
-              <div class="cimcima">
-                <span class="live-indicator cimcima2">
+                <div class="box">
+                    <li class="readers">
+                        <img class="person" src="src/img/active.png" alt="" />
+                        <h5 class="name">Sulkhan Kvernadze</h5>
+                        <div class="cimcima">
+                            <span class="live-indicator cimcima2">
                   <i class="fa fa-circle blink" aria-hidden="true"></i>Active
                 </span>
-              </div>
-              <br />
-              <span class="user-title">Book worm</span>
-              <br />
-              <a class="preview">Preview</a>
-              <a class="books">12 books</a>
-            </li>
-          </div>
+                        </div>
+                        <br />
+                        <span class="user-title">Book worm</span>
+                        <br />
+                        <a class="preview">Preview</a>
+                        <a class="books">12 books</a>
+                    </li>
+                </div>
 
-          <div class="box">
-            <li class="readers">
-              <img class="person" src="src/img/active.png" alt="" />
-              <h5 class="name">Sulkhan Kvernadze</h5>
-              <div class="cimcima">
-                <span class="live-indicator cimcima2">
+                <div class="box">
+                    <li class="readers">
+                        <img class="person" src="src/img/active.png" alt="" />
+                        <h5 class="name">Sulkhan Kvernadze</h5>
+                        <div class="cimcima">
+                            <span class="live-indicator cimcima2">
                   <i class="fa fa-circle blink" aria-hidden="true"></i>Active
                 </span>
-              </div>
-              <br />
-              <span class="user-title">Book worm</span>
-              <br />
-              <a class="preview">Preview</a>
-              <a class="books">12 books</a>
-            </li>
-          </div>
-        </ol>
-      </div>
-    </section>
-<!--subscribe-->
-    <section class="container subscribe">
-      <div class="row">
-        <div class="col-5 mt-100 ml-100">
-          <h2 class="header-txt">
-            Subscribe to our new free <br />
-            books
-          </h2>
-          <br />
-          <p class="banner-txt">
-            Welcome to Book Depository! We have more than 5 million titles
-            <br />
-            and free delivery worldwide to over 120 countries. We also really,
-            <br />
-            really love books.
-          </p>
+                        </div>
+                        <br />
+                        <span class="user-title">Book worm</span>
+                        <br />
+                        <a class="preview">Preview</a>
+                        <a class="books">12 books</a>
+                    </li>
+                </div>
+            </ol>
         </div>
-        <div class="col-6">
-          <input
+    </section>
+    <!--subscribe-->
+    <section class="container subscribe">
+        <div class="row">
+            <div class="col-5 mt-100 ml-100">
+                <h2 class="header-txt">
+                    Subscribe to our new free <br />
+            books
+                </h2>
+                <br />
+                <p class="banner-txt">
+                    Welcome to Book Depository! We have more than 5 million titles
+                    <br />
+            and free delivery worldwide to over 120 countries. We also really,
+                    <br />
+            really love books.
+                </p>
+            </div>
+            <div class="col-6">
+                <input
             type="mail"
             class="subscribe-input"
             placeholder="Your email here"
           />
-          <button class="btn1">Subscribe</button>
+                <button class="btn1">Subscribe</button>
+            </div>
         </div>
-      </div>
     </section>
-<!--books-->
+    <!--books-->
     <section class="container book-list mt-100">
-      <div class="row">
-        <div class="col-3">
-          <img src="src/img/1212.png" alt="" />
-          <p class="book-title">
-            Seven Husbands of Evelyn Hugo : The Sunday Times Bestseller
-          </p>
+        <div class="row">
+            <div class="col-3">
+                <img src="src/img/1212.png" alt="" />
+                <p class="book-title">
+                    Seven Husbands of Evelyn Hugo : The Sunday Times Bestseller
+                </p>
+            </div>
+            <div class="col-3">
+                <img src="src/img/1212.png" alt="" />
+                <p class="book-title">
+                    Seven Husbands of Evelyn Hugo : The Sunday Times Bestseller
+                </p>
+            </div>
+            <div class="col-3">
+                <img src="src/img/1212.png" alt="" />
+                <p class="book-title">
+                    Seven Husbands of Evelyn Hugo : The Sunday Times Bestseller
+                </p>
+            </div>
+            <div class="col-3">
+                <img src="src/img/1212.png" alt="" />
+                <p class="book-title">
+                    Seven Husbands of Evelyn Hugo : The Sunday Times Bestseller
+                </p>
+            </div>
         </div>
-        <div class="col-3">
-          <img src="src/img/1212.png" alt="" />
-          <p class="book-title">
-            Seven Husbands of Evelyn Hugo : The Sunday Times Bestseller
-          </p>
-        </div>
-        <div class="col-3">
-          <img src="src/img/1212.png" alt="" />
-          <p class="book-title">
-            Seven Husbands of Evelyn Hugo : The Sunday Times Bestseller
-          </p>
-        </div>
-        <div class="col-3">
-          <img src="src/img/1212.png" alt="" />
-          <p class="book-title">
-            Seven Husbands of Evelyn Hugo : The Sunday Times Bestseller
-          </p>
-        </div>
-      </div>
     </section>
     <!--footer-->
     <footer class="container mt-200">
-      <div class="row">
-        <div class="col-1 footer-logo">
-          <img src="src/img/logo.png" alt="" />
-        </div>
-        <div class="col-5">
-          <h2 class="header-txt">
-            Keep your mind and side <br />
+        <div class="row">
+            <div class="col-1 footer-logo">
+                <img src="src/img/logo.png" alt="" />
+            </div>
+            <div class="col-5">
+                <h2 class="header-txt">
+                    Keep your mind and side <br />
             full of content
-          </h2>
+                </h2>
+            </div>
+            <div class="col-3">
+                <ul class="nav">
+                    <a href="" class="nav-links">
+                        <li>Home</li>
+                    </a>
+                    <a href="" class="nav-links">
+                        <li>Wishlist</li>
+                    </a>
+                    <a href="products.html" class="nav-links">
+                        <li>Products</li>
+                    </a>
+                    <a href="" class="nav-links">
+                        <li>ContactUs</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-3">
+                <ul class="nav">
+                    <a href="https://www.behance.net/" class="nav-links">
+                        <li>Behance</li>
+                    </a>
+                    <a href="https://www.linkedin.com/feed/" class="nav-links">
+                        <li>Linkedin</li>
+                    </a>
+                    <a href="https://dribbble.com/" class="nav-links">
+                        <li>Dribble</li>
+                    </a>
+                    <a href="https://www.facebook.com/" class="nav-links">
+                        <li>Facebook</li>
+                    </a>
+                </ul>
+            </div>
         </div>
-        <div class="col-3">
-          <ul class="nav">
-            <a href="" class="nav-links"><li>Home</li></a>
-            <a href="" class="nav-links"><li>Wishlist</li></a>
-            <a href="" class="nav-links"><li>Products</li></a>
-            <a href="" class="nav-links"><li>ContactUs</li></a>
-          </ul>
+        <hr />
+        <div class="row">
+            <div class="col-6 nav-links">
+                <span>© 2013-2022 - Boombook</span>
+            </div>
+            <div class="col-6">
+                <ul class="nav">
+                    <a href="" class="nav-links">
+                        <li>Privacy Policy</li>
+                    </a>
+                    <a href="" class="nav-links">
+                        <li>Cookie policy</li>
+                    </a>
+                    <a href="" class="nav-links">
+                        <li>Terms & conditions</li>
+                    </a>
+                </ul>
+            </div>
         </div>
-        <div class="col-3">
-          <ul class="nav">
-            <a href="https://www.behance.net/" class="nav-links"
-              ><li>Behance</li></a
-            >
-            <a href="https://www.linkedin.com/feed/" class="nav-links"
-              ><li>Linkedin</li></a
-            >
-            <a href="https://dribbble.com/" class="nav-links"
-              ><li>Dribble</li></a
-            >
-            <a href="https://www.facebook.com/" class="nav-links"
-              ><li>Facebook</li></a
-            >
-          </ul>
-        </div>
-      </div>
-      <hr />
-      <div class="row">
-        <div class="col-6 nav-links">
-          <span>© 2013-2022 - Boombook</span>
-        </div>
-        <div class="col-6">
-          <ul class="nav">
-            <a href="" class="nav-links"><li>Privacy Policy</li></a>
-            <a href="" class="nav-links"><li>Cookie policy</li></a>
-            <a href="" class="nav-links"><li>Terms & conditions</li></a>
-          </ul>
-        </div>
-      </div>
-      <hr />
+        <hr />
     </footer>
-<!--js-->
+    <!--js-->
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>

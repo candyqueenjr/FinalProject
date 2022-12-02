@@ -2,14 +2,14 @@
 
 const header = document.querySelector('.header');
 
-window.onscroll = function() {
-	var top = window.scrollY;
-	console.log(top);
-	if (top >= 100) {
-		header.classList.add('active')
-	}else {
-		header.classList.remove('active');
-	}
+window.onscroll = function () {
+    var top = window.scrollY;
+    console.log(top);
+    if (top >= 100) {
+        header.classList.add('active')
+    } else {
+        header.classList.remove('active');
+    }
 }
 
 
@@ -23,10 +23,10 @@ window.onscroll = function() {
 
 let navLink = document.querySelectorAll(".nav-link");
 navLink.forEach((a) => {
-  a.addEventListener("mouseover", function () {
-    navLink.forEach((a) => a.classList.remove("active"));
-    this.classList.add("active");
-  });
+    a.addEventListener("mouseover", function () {
+        navLink.forEach((a) => a.classList.remove("active"));
+        this.classList.add("active");
+    });
 });
 
 //#endregion
@@ -120,6 +120,21 @@ navLink.forEach((a) => {
 
 // init();
 
+
+var balls = document.getElementsByClassName("ball");
+document.onmousemove = function(event){
+  var x = event.clientX * 100 / window.innerWidth + "%";
+  var y = event.clientY * 100 / window.innerHeight + "%";
+
+  for(var i = 0; i < 2; i++){
+    balls[i].style.left = x;
+    balls[i].style.top = y;
+    balls[i].style.transform = "translate(-"+x+",-"+y+")";
+  }
+}
+
+
+
 //#endregion
 
 //#region header typeWriter
@@ -140,35 +155,35 @@ var _ELEMENT = document.querySelector("#text");
 
 // Implements typing effect
 function Type() {
-  var text = _CONTENT[_PART].substring(0, _PART_INDEX + 1);
-  _ELEMENT.innerHTML = text;
-  _PART_INDEX++;
+    var text = _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+    _ELEMENT.innerHTML = text;
+    _PART_INDEX++;
 
-  // If full sentence has been displayed then start to delete the sentence after some time
-  if (text === _CONTENT[_PART]) {
-    clearInterval(_INTERVAL_VAL);
-    setTimeout(function () {
-      _INTERVAL_VAL = setInterval(Delete, 150);
-    }, 1000);
-  }
+    // If full sentence has been displayed then start to delete the sentence after some time
+    if (text === _CONTENT[_PART]) {
+        clearInterval(_INTERVAL_VAL);
+        setTimeout(function () {
+            _INTERVAL_VAL = setInterval(Delete, 150);
+        }, 1000);
+    }
 }
 
 function Delete() {
-  var text = _CONTENT[_PART].substring(0, _PART_INDEX - 1);
-  _ELEMENT.innerHTML = text;
-  _PART_INDEX--;
+    var text = _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+    _ELEMENT.innerHTML = text;
+    _PART_INDEX--;
 
-  if (text === "") {
-    clearInterval(_INTERVAL_VAL);
+    if (text === "") {
+        clearInterval(_INTERVAL_VAL);
 
-    if (_PART == _CONTENT.length - 1) _PART = 0;
-    else _PART++;
-    _PART_INDEX = 0;
+        if (_PART == _CONTENT.length - 1) _PART = 0;
+        else _PART++;
+        _PART_INDEX = 0;
 
-    setTimeout(function () {
-      _INTERVAL_VAL = setInterval(Type, 150);
-    }, 200);
-  }
+        setTimeout(function () {
+            _INTERVAL_VAL = setInterval(Type, 150);
+        }, 200);
+    }
 }
 
 _INTERVAL_VAL = setInterval(Type, 150);
@@ -178,46 +193,46 @@ _INTERVAL_VAL = setInterval(Type, 150);
 //#region Timer
 
 (function () {
-  const second = 999,
-    minute = second * 60,
-    hour = minute * 60,
-    day = hour * 24;
+    const second = 999,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
 
-  let today = new Date(),
-    dd = String(today.getDate()).padStart(2, "0"),
-    mm = String(today.getMonth() + 1).padStart(2, "0"),
-    yyyy = today.getFullYear(),
-    nextYear = yyyy + 1,
-    dayMonth = "10/18/",
-    birthday = dayMonth + yyyy;
+    let today = new Date(),
+        dd = String(today.getDate()).padStart(2, "0"),
+        mm = String(today.getMonth() + 1).padStart(2, "0"),
+        yyyy = today.getFullYear(),
+        nextYear = yyyy + 1,
+        dayMonth = "10/18/",
+        birthday = dayMonth + yyyy;
 
-  today = mm + "/" + dd + "/" + yyyy;
-  if (today > birthday) {
-    birthday = dayMonth + nextYear;
-  }
+    today = mm + "/" + dd + "/" + yyyy;
+    if (today > birthday) {
+        birthday = dayMonth + nextYear;
+    }
 
-  const countDown = new Date(birthday).getTime(),
-    x = setInterval(function () {
-      const now = new Date().getTime(),
-        distance = countDown - now;
+    const countDown = new Date(birthday).getTime(),
+        x = setInterval(function () {
+            const now = new Date().getTime(),
+                distance = countDown - now;
 
-      (document.getElementById("days").innerText = Math.floor(distance / day)),
-        (document.getElementById("hours").innerText = Math.floor(
-          (distance % day) / hour
-        )),
-        (document.getElementById("minutes").innerText = Math.floor(
-          (distance % hour) / minute
-        )),
-        (document.getElementById("seconds").innerText = Math.floor(
-          (distance % minute) / second
-        ));
+            (document.getElementById("days").innerText = Math.floor(distance / day)),
+                (document.getElementById("hours").innerText = Math.floor(
+                    (distance % day) / hour
+                )),
+                (document.getElementById("minutes").innerText = Math.floor(
+                    (distance % hour) / minute
+                )),
+                (document.getElementById("seconds").innerText = Math.floor(
+                    (distance % minute) / second
+                ));
 
-      if (distance < 0) {
-        document.getElementById("headline").innerText = "All BOOKS are BOOM";
-        document.getElementById("countdown").style.display = "none";
-        clearInterval(x);
-      }
-    }, 0);
+            if (distance < 0) {
+                document.getElementById("headline").innerText = "All BOOKS are BOOM";
+                document.getElementById("countdown").style.display = "none";
+                clearInterval(x);
+            }
+        }, 0);
 })();
 
 //#endregion
@@ -225,41 +240,41 @@ _INTERVAL_VAL = setInterval(Type, 150);
 //#region book API
 
 async function boooks() {
-  const books = await fetch(
-    "https://www.googleapis.com/books/v1/volumes?q=time&printType=books&key=AIzaSyB6UbkiRzJpKT26g1WLRTiBjDl0J90SCe0"
-  );
-  const objOfBooks = await books.json();
-  const mzaObieqti = [];
-  // console.log(objOfBooks)
-  objOfBooks.items.forEach((book) => {
-    // title
-    let title = book.volumeInfo.title;
-    // console.log(title)
-    // authors
-    let authors = book.volumeInfo.authors;
-    if (book.volumeInfo.authors == undefined) {
-      authors = book.volumeInfo.publisher;
-    }
+    const books = await fetch(
+        "https://www.googleapis.com/books/v1/volumes?q=time&printType=books&key=AIzaSyB6UbkiRzJpKT26g1WLRTiBjDl0J90SCe0"
+    );
+    const objOfBooks = await books.json();
+    const mzaObieqti = [];
+    // console.log(objOfBooks)
+    objOfBooks.items.forEach((book) => {
+        // title
+        let title = book.volumeInfo.title;
+        // console.log(title)
+        // authors
+        let authors = book.volumeInfo.authors;
+        if (book.volumeInfo.authors == undefined) {
+            authors = book.volumeInfo.publisher;
+        }
 
-	//Description
-	let description = book.volumeInfo.description;
-	if (book.volumeInfo.description == undefined) {
-		description = book.etag;
-	  }
+        //Description
+        let description = book.volumeInfo.description;
+        if (book.volumeInfo.description == undefined) {
+            description = book.etag;
+        }
 
-    // images
-    let image = book.volumeInfo.imageLinks.thumbnail;
+        // images
+        let image = book.volumeInfo.imageLinks.thumbnail;
 
-    // console.log(image)
-    const droebitiObieqti = {
-      title: title,
-      image: image,
-      authors: authors,
-	  description: description
-    };
-    mzaObieqti.push(droebitiObieqti);
-  });
-  showBooks(mzaObieqti);
+        // console.log(image)
+        const droebitiObieqti = {
+            title: title,
+            image: image,
+            authors: authors,
+            description: description
+        };
+        mzaObieqti.push(droebitiObieqti);
+    });
+    showBooks(mzaObieqti);
 }
 
 boooks();
@@ -267,15 +282,15 @@ boooks();
 const main = document.getElementById("main");
 
 function showBooks(books) {
-  main.innerHTML = "";
+    main.innerHTML = "";
 
-  books.forEach((book) => {
-    const { title, image, authors, description } = book;
+    books.forEach((book) => {
+        const { title, image, authors, description } = book;
 
-    const bookEl = document.createElement("div");
-    bookEl.classList.add("book");
+        const bookEl = document.createElement("div");
+        bookEl.classList.add("book");
 
-    bookEl.innerHTML = `
+        bookEl.innerHTML = `
           <img
             src="${image}"
 			alt = "${title}"
@@ -289,27 +304,27 @@ function showBooks(books) {
           ${authors}
         </div>
 		`;
-    main.appendChild(bookEl);
-    bookEl.addEventListener("click", () => {
-      console.log(book);
-    });
-    //
-    const modal = document.getElementById("myModal");
-    const modalContent = document.getElementById("modal-content");
-    const close = document.getElementsByClassName("close")[0];
-    bookEl.onclick = function () {
-      modal.style.display = "block";
-    };
-    close.onclick = () => {
-      modal.style.display = "none";
-    };
+        main.appendChild(bookEl);
+        bookEl.addEventListener("click", () => {
+            console.log(book);
+        });
+        //
+        const modal = document.getElementById("myModal");
+        const modalContent = document.getElementById("modal-content");
+        const close = document.getElementsByClassName("close")[0];
+        bookEl.onclick = function () {
+            modal.style.display = "block";
+        };
+        close.onclick = () => {
+            modal.style.display = "none";
+        };
 
-    window.onclick = (event) =>{
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    };
-    modalContent.innerHTML = `
+        window.onclick = (event) => {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+        modalContent.innerHTML = `
 	<div class="modal-content">
 	<div class="col-5">
 	<span class="close">&times;</span>
@@ -319,11 +334,14 @@ function showBooks(books) {
 	<h2 class="modal-title">${title}</h2>
 	<p class="modal-p">${authors}</p>
 	<p class="modal-desc">${description}</p>
+  <button class="red-btn">Explode book</button>
+  <button class="gray-btn">Add to wishlist</button>
+  <a class="modal-a" href="#">Start your 30 day  free trial</a>
 	
 	</div>
 			</div>
 			`;
-  });
+    });
 }
 //#endregion
 // on book class click show overview
