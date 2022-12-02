@@ -307,6 +307,24 @@ i:hover {
   border-radius: 4px;
 }
 
+textarea {
+  background-color: #f6f6f6;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  width: 386px;
+  height: 120px;
+  left: 490px;
+  top: 322px;
+  line-height: 21px;
+  color: #111315;
+  opacity: 0.45;
+  border-radius: 4px;
+ 
+}
+
 h1 {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -340,4 +358,87 @@ a:active {
 a {
   display: block;
   padding: 15px;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  #deto {
+    display: none;
+  }
+
+  .header-txt {
+    width: 320px;
+  }
+
+  .book-title {
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .book-list {
+    text-align: center;
+  }
+
+  #socials {
+    display: none;
+  }
+
+  #sub {
+    margin-left: 0;
+  }
+ 
+}
+
+
+
+@media only screen and (max-width: 992px) {
+  .map {
+    display: none;
+  }
+
+  .map-btn {
+    display: none;
+  }
+
+  .subscribe {
+    height: auto;
+    text-align: center;
+   }
+  
+   .subscribe-input{
+    margin-bottom: 50px;
+    margin-top: 20px;
+   }
+
+   #deto {
+    display: none;
+   }
+
+   .cart-icon {
+    display: none;
+   }
+
+   .user-icon {
+    display: none;
+   }
+
+}
+
+@media only screen and (max-width: 1200px) {
+  #footer-header {
+    display: none;
+  }
+  
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
 }

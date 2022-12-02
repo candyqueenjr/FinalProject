@@ -1,4 +1,4 @@
-
+//#region 
 
 const header = document.querySelector('.header');
 
@@ -12,12 +12,7 @@ window.onscroll = function () {
     }
 }
 
-
-
-
-
-
-
+//#endregion
 
 //#region active class for navigation
 
@@ -31,95 +26,7 @@ navLink.forEach((a) => {
 
 //#endregion
 
-//#region Logo eyes
-//Logo eyes
-
-// window.requestAnimFrame = (function() {
-// 				return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
-//   function(callback) {
-// 	  window.setTimeout(callback, 1000 / 60);
-// 	};
-// })();
-
-// var ctx,
-//     WIDTH,
-//     HEIGHT,
-//     leftEye,
-//     rightEye,
-//     mouse,
-
-// Eye = function(pos) {
-//   	this.pos = {
-// 		x : pos.x,
-// 		y : pos.y
-// 	};
-// 	this.center = {
-// 		x : pos.x,
-// 		y : pos.y
-// 	};
-// 	this.translation = {
-// 		x : (window.innerWidth / 3 - canvas.width / 3) + this.center.x,
-// 		y : this.center.y
-//   };
-// }
-
-// Eye.prototype.draw = function() {
-//   	ctx.beginPath();
-// 	ctx.arc(this.pos.x, this.pos.y, 3, 0, Math.PI * 2);
-// 	ctx.fillStyle = '#333';
-// 	ctx.fill();
-// }
-
-// Eye.prototype.update = function() {
-// 	var deltaX = mouse.x - this.translation.x;
-// 	var deltaY = mouse.y - this.translation.y;
-// 	var mag = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-// 	var angleRad = Math.atan2(deltaY, deltaX);
-// 	var newPosX = this.center.x + 6 * Math.cos(angleRad);
-// 	var newPosY = this.center.y + 11 * Math.sin(angleRad);
-// 	this.pos.x += (newPosX - this.pos.x) / 5;
-// 	this.pos.y += (newPosY - this.pos.y) / 5;
-// }
-
-// var init = function() {
-//   var canvas = document.getElementById('canvas');
-// 	ctx = canvas.getContext('2d');
-// 	canvas.width = WIDTH = 750;
-// 	canvas.height = HEIGHT = 85;
-// 	leftEye = new Eye({
-// 	  	x : WIDTH / 2 - 14,
-// 		y : HEIGHT / 2 + 18
-// 	});
-// 	rightEye = new Eye({
-// 		x : WIDTH / 2 + 8,
-// 		y : HEIGHT / 2 + 18
-// 	});
-// 	mouse = {
-// 		x : 0,
-// 		y : 0
-// 	};
-// 	bindEventHandlers();
-// 	draw();
-// }
-
-// var draw = function() {
-//   	ctx.clearRect(0, 0, WIDTH, HEIGHT);
-// 	leftEye.update();
-// 	rightEye.update();
-// 	leftEye.draw();
-// 	rightEye.draw();
-//   	requestAnimFrame(draw);
-// }
-
-// var bindEventHandlers = function() {
-//   	document.onmousemove = function(e) {
-// 	  	mouse.x = e.pageX;
-// 		mouse.y = e.pageY;
-// 	}
-// }
-
-// init();
-
+//#region 
 
 var balls = document.getElementsByClassName("ball");
 document.onmousemove = function(event){
@@ -241,7 +148,7 @@ _INTERVAL_VAL = setInterval(Type, 150);
 
 async function boooks() {
     const books = await fetch(
-        "https://www.googleapis.com/books/v1/volumes?q=time&printType=books&key=AIzaSyB6UbkiRzJpKT26g1WLRTiBjDl0J90SCe0"
+        "https://www.googleapis.com/books/v1/volumes?q=search+terms"
     );
     const objOfBooks = await books.json();
     const mzaObieqti = [];

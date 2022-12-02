@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="src/css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- ნავიგაცია -->
     <header class="header">
         <div class="container mt-5">
-            <div class="row">
-                <div class="col-2">
+            <div class="row justify-content-between">
+                <div id="logo" class="col-sm-3">
+                  <div class="eyes">
+                    <div class="eye">
+                      <div class="ball"></div>
+                    </div>
+                    <div class="eye">
+                      <div class="ball"></div>
+                    </div>
+                  </div>
                     <!-- <canvas id="canvas"></canvas> -->
                     <img class="logo" src="src/img/logo.svg" alt="logo" />
                 </div>
-                <div class="col-9">
+                <div class="col-sm" id="deto">
                     <div class="live-indicator-block">
                         <span class="live-indicator">
                 <i class="fa fa-circle blink" aria-hidden="true"></i>233
@@ -32,23 +46,23 @@
               </span>
                     </div>
                 </div>
-                <div class="col-1">
+                <div class="col-sm-2" id="outer-icons">
                     <div class="row">
-                        <div class="col-4">
-                            <i class="fa-regular fa-circle-user"></i>
+                        <div class="col user-icon small-icons">
+                            <i class="fa-regular fa-circle-user "></i>
                         </div>
-                        <div class="col-4">
+                        <div class="col cart-icon small-icons">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </div>
-                        <div class="col-4">
+                        <div class="burger-menu col small-icons">
                             <div class="nav">
                                 <div class="dropdown">
-                                    <a class="dropbtn"><i class="fa-solid fa-minus icon-btn"></i></a>
+                                    <a class="dropbtn"><i class="fa-solid fa-bars-staggered"></i></a>
                                     <div class="dropdown-content">
                                         <a href="index.html">Home</a>
                                         <a href="#">Wishlist</a>
                                         <a href="products.html">Products</a>
-                                        <a href="#">Contact Us</a>
+                                        <a href="contact.html">Contact Us</a>
                                     </div>
                                 </div>
                                 </nav>
@@ -60,8 +74,7 @@
         </div>
     </header>
 
-
-    <section class="container mt-230">
+    <section class="container mt-200">
         <div class="row">
             <main id="main"></main>
         </div>
@@ -78,18 +91,19 @@
         </div>
     </section>
 
-    <footer class="container mt-200">
+
+    <footer class="container mt-200" id="footer">
         <div class="row">
-            <div class="col-1 footer-logo">
+            <div class="col footer-logo">
                 <img src="src/img/logo.png" alt="" />
             </div>
-            <div class="col-5">
-                <h2 class="header-txt">
+            <div class="col">
+                <h2 id="footer-header" class="header-txt">
                     Keep your mind and side <br />
-              full of content
+            full of content
                 </h2>
             </div>
-            <div class="col-3">
+            <div class="col">
                 <ul class="nav">
                     <a href="index.html" class="nav-links">
                         <li>Home</li>
@@ -97,15 +111,15 @@
                     <a href="" class="nav-links">
                         <li>Wishlist</li>
                     </a>
-                    <a href="" class="nav-links">
+                    <a href="products.html" class="nav-links">
                         <li>Products</li>
                     </a>
-                    <a href="" class="nav-links">
+                    <a href="contact.html" class="nav-links">
                         <li>ContactUs</li>
                     </a>
                 </ul>
             </div>
-            <div class="col-3">
+            <div class="col" id="socials">
                 <ul class="nav">
                     <a href="https://www.behance.net/" class="nav-links">
                         <li>Behance</li>
@@ -141,10 +155,12 @@
                 </ul>
             </div>
         </div>
-        <hr />
     </footer>
-    <!--js-->
-    <script src="script.js"></script>
-</body>
 
+
+    <!--js-->
+    <!-- <script src="/script.js"></script> -->
+    <script src="/products.js"></script>
+
+  </body>
 </html>
