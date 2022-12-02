@@ -843,9 +843,11 @@ hr {
   display: flex;
   justify-content: end;
   text-align: center;
+  width: 260px;
 }
 
 .nav-links {
+  width: ;
   list-style: none;
   padding-left: 50px;
   padding-top: 10px;
@@ -858,14 +860,7 @@ hr {
   opacity: 0.6;
   transition: transform 1.5 ease-in;
   translate: 1.5 ease;
-}
-
-#wishlist {
-  margin-left: 20px;
-}
-
-#facebook {
-  margin-left: 13px;
+  width: 130px;
 }
 
 .book-title {
@@ -1139,6 +1134,10 @@ a:focus {
     display: none;
   }
 
+  .header-txt {
+    width: 320px;
+  }
+
   .book-title {
     text-align: center;
     align-items: center;
@@ -1150,6 +1149,13 @@ a:focus {
     text-align: center;
   }
 
+  #socials {
+    display: none;
+  }
+
+  #sub {
+    margin-left: 0;
+  }
  
 }
 
@@ -1172,6 +1178,18 @@ a:focus {
    .subscribe-input{
     margin-bottom: 50px;
     margin-top: 20px;
+   }
+
+   #deto {
+    display: none;
+   }
+
+   .cart-icon {
+    display: none;
+   }
+
+   .user-icon {
+    display: none;
    }
 
 }
