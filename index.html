@@ -21,52 +21,53 @@
     <title>Document</title>
   </head>
   <body>
+    
     <!-- ნავიგაცია -->
-    <header class="container mt-5">
-      <div class="row">
-        <div class="col-2">
-          <!-- <canvas id="canvas"></canvas> -->
-          <img class="logo" src="src/img/logo.svg" alt="logo" />
-        </div>
-        <div class="col-9">
-          <div class="live-indicator-block">
-            <span class="live-indicator">
-              <i class="fa fa-circle blink" aria-hidden="true"></i>233
-              Detonators
-            </span>
+    <header class="header">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-2">
+            <!-- <canvas id="canvas"></canvas> -->
+            <img class="logo" src="src/img/logo.svg" alt="logo" />
           </div>
-        </div>
-        <div class="col-1">
-          <div class="row">
-            <div class="col-4">
-              <i class="fa-regular fa-circle-user"></i>
+          <div class="col-9">
+            <div class="live-indicator-block">
+              <span class="live-indicator">
+                <i class="fa fa-circle blink" aria-hidden="true"></i>233
+                Detonators
+              </span>
             </div>
-            <div class="col-4">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </div>
-            <div class="col-4">
-              <div class="nav">
-                <div class="menu-btn">
-                  <i class="fa-solid fa-bars-staggered"></i>
+          </div>
+          <div class="col-1">
+            <div class="row">
+              <div class="col-4">
+                <i class="fa-regular fa-circle-user"></i>
+              </div>
+              <div class="col-4">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+              <div class="col-4">
+                <div class="nav">
+                  <div class="dropdown">
+                    <a class="dropbtn"><i class="fa-solid fa-minus icon-btn"></i></a>
+                    <div class="dropdown-content">
+                      <a href="#">Home</a>
+                      <a href="#">Wishlist</a>
+                      <a href="#">Products</a>
+                      <a href="#">Contact Us</a>
+                    </div>
+                  </div>
+                </nav>
                 </div>
-                <ul class="nav-btns">
-                  <a href="">
-                    <li class="nav-icons home">Home</li>
-                  </a>
-                  <a href="">
-                    <li class="nav-icons bookmarks">Wishlist</li>
-                  </a>
-                  <a href=""> <li class="nav-icons newsletter">Products</li></a>
-                  <a href=""> <li class="nav-icons contacts">Contact Us</li></a>
-                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
     </header>
+   
     <!-- მაპი/ბანერი -->
-    <section class="container">
+    <section class="container mt-100">
       <div class="row">
         <div class="col-4 mt-230">
           <p class="banner-txt">Best book store</p>
@@ -291,6 +292,17 @@
       <div class="row">
         <main id="main"></main>
       </div>
+    <div class="row">
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" id="modal-content">
+          <span class="close">&times;</span>
+        </div>
+      
+      </div>
+
+    </div>
     </section>
     <!--customers-->
     <section class="container mt-100">
@@ -482,7 +494,7 @@
         </ol>
       </div>
     </section>
-
+<!--subscribe-->
     <section class="container subscribe">
       <div class="row">
         <div class="col-5 mt-100 ml-100">
@@ -509,7 +521,7 @@
         </div>
       </div>
     </section>
-
+<!--books-->
     <section class="container book-list mt-100">
       <div class="row">
         <div class="col-3">
@@ -538,6 +550,7 @@
         </div>
       </div>
     </section>
+    <!--footer-->
     <footer class="container mt-200">
       <div class="row">
         <div class="col-1 footer-logo">
@@ -589,7 +602,7 @@
       </div>
       <hr />
     </footer>
-
+<!--js-->
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,16 +1,35 @@
+
+
+const header = document.querySelector('.header');
+
+window.onscroll = function() {
+	var top = window.scrollY;
+	console.log(top);
+	if (top >= 100) {
+		header.classList.add('active')
+	}else {
+		header.classList.remove('active');
+	}
+}
+
+
+
+
+
+
+
+
 //#region active class for navigation
 
-let navLink = document.querySelectorAll(".nav-link")
-navLink.forEach( a =>{
-    a.addEventListener('mouseover', function(){
-        navLink.forEach(a => a.classList.remove('active'));
-        this.classList.add('active');
-    })
-})
+let navLink = document.querySelectorAll(".nav-link");
+navLink.forEach((a) => {
+  a.addEventListener("mouseover", function () {
+    navLink.forEach((a) => a.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
 
 //#endregion
-
-
 
 //#region Logo eyes
 //Logo eyes
@@ -61,7 +80,7 @@ navLink.forEach( a =>{
 // 	this.pos.x += (newPosX - this.pos.x) / 5;
 // 	this.pos.y += (newPosY - this.pos.y) / 5;
 // }
-			
+
 // var init = function() {
 //   var canvas = document.getElementById('canvas');
 // 	ctx = canvas.getContext('2d');
@@ -82,7 +101,7 @@ navLink.forEach( a =>{
 // 	bindEventHandlers();
 // 	draw();
 // }
-    
+
 // var draw = function() {
 //   	ctx.clearRect(0, 0, WIDTH, HEIGHT);
 // 	leftEye.update();
@@ -91,7 +110,7 @@ navLink.forEach( a =>{
 // 	rightEye.draw();
 //   	requestAnimFrame(draw);
 // }
-    
+
 // var bindEventHandlers = function() {
 //   	document.onmousemove = function(e) {
 // 	  	mouse.x = e.pageX;
@@ -103,16 +122,14 @@ navLink.forEach( a =>{
 
 //#endregion
 
-
-
 //#region header typeWriter
 
-var _CONTENT = [ "Explode", "Blow up", "Detonate", "Boom" ];
+var _CONTENT = ["Explode", "Blow up", "Detonate", "Boom"];
 
 // Current sentence being processed
 var _PART = 0;
 
-// Character number of the current sentence being processed 
+// Character number of the current sentence being processed
 var _PART_INDEX = 0;
 
 // Holds the handle returned from setInterval
@@ -122,162 +139,147 @@ var _INTERVAL_VAL;
 var _ELEMENT = document.querySelector("#text");
 
 // Implements typing effect
-function Type() { 
-	var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
-	_ELEMENT.innerHTML = text;
-	_PART_INDEX++;
+function Type() {
+  var text = _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+  _ELEMENT.innerHTML = text;
+  _PART_INDEX++;
 
-	// If full sentence has been displayed then start to delete the sentence after some time
-	if(text === _CONTENT[_PART]) {
-		clearInterval(_INTERVAL_VAL);
-		setTimeout(function() {
-			_INTERVAL_VAL = setInterval(Delete, 150);
-		}, 1000);
-	}
+  // If full sentence has been displayed then start to delete the sentence after some time
+  if (text === _CONTENT[_PART]) {
+    clearInterval(_INTERVAL_VAL);
+    setTimeout(function () {
+      _INTERVAL_VAL = setInterval(Delete, 150);
+    }, 1000);
+  }
 }
 
 function Delete() {
-	var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
-	_ELEMENT.innerHTML = text;
-	_PART_INDEX--;
+  var text = _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+  _ELEMENT.innerHTML = text;
+  _PART_INDEX--;
 
-	if(text === '') {
-		clearInterval(_INTERVAL_VAL);
+  if (text === "") {
+    clearInterval(_INTERVAL_VAL);
 
-		if(_PART == (_CONTENT.length - 1))
-			_PART = 0;
-		else
-			_PART++;
-		_PART_INDEX = 0;
+    if (_PART == _CONTENT.length - 1) _PART = 0;
+    else _PART++;
+    _PART_INDEX = 0;
 
-		setTimeout(function() {
-			_INTERVAL_VAL = setInterval(Type, 150);
-		}, 200);
-	}
+    setTimeout(function () {
+      _INTERVAL_VAL = setInterval(Type, 150);
+    }, 200);
+  }
 }
 
 _INTERVAL_VAL = setInterval(Type, 150);
 
 //#endregion
 
-
-
 //#region Timer
 
-
 (function () {
-	const second = 999,
-	  minute = second * 60,
-	  hour = minute * 60,
-	  day = hour * 24;
-  
-	let today = new Date(),
-	  dd = String(today.getDate()).padStart(2, "0"),
-	  mm = String(today.getMonth() + 1).padStart(2, "0"),
-	  yyyy = today.getFullYear(),
-	  nextYear = yyyy + 1,
-	  dayMonth = "10/18/",
-	  birthday = dayMonth + yyyy;
-  
-	today = mm + "/" + dd + "/" + yyyy;
-	if (today > birthday) {
-	  birthday = dayMonth + nextYear;
-	}
+  const second = 999,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
 
-	
-	const countDown = new Date(birthday).getTime(),
-	  x = setInterval(function () {
-		const now = new Date().getTime(),
-		  distance = countDown - now;
-  
-		(document.getElementById("days").innerText = Math.floor(distance / day)),
-		  (document.getElementById("hours").innerText = Math.floor(
-			(distance % day) / hour
-		  )),
-		  (document.getElementById("minutes").innerText = Math.floor(
-			(distance % hour) / minute
-		  )),
-		  (document.getElementById("seconds").innerText = Math.floor(
-			(distance % minute) / second
-		  ));
-  
-		if (distance < 0) {
-		  document.getElementById("headline").innerText = "All BOOKS are BOOM";
-		  document.getElementById("countdown").style.display = "none";
-		  clearInterval(x);
-		}
-	  }, 0);
-  })();
+  let today = new Date(),
+    dd = String(today.getDate()).padStart(2, "0"),
+    mm = String(today.getMonth() + 1).padStart(2, "0"),
+    yyyy = today.getFullYear(),
+    nextYear = yyyy + 1,
+    dayMonth = "10/18/",
+    birthday = dayMonth + yyyy;
 
+  today = mm + "/" + dd + "/" + yyyy;
+  if (today > birthday) {
+    birthday = dayMonth + nextYear;
+  }
 
-  
-  //#endregion
+  const countDown = new Date(birthday).getTime(),
+    x = setInterval(function () {
+      const now = new Date().getTime(),
+        distance = countDown - now;
 
+      (document.getElementById("days").innerText = Math.floor(distance / day)),
+        (document.getElementById("hours").innerText = Math.floor(
+          (distance % day) / hour
+        )),
+        (document.getElementById("minutes").innerText = Math.floor(
+          (distance % hour) / minute
+        )),
+        (document.getElementById("seconds").innerText = Math.floor(
+          (distance % minute) / second
+        ));
 
+      if (distance < 0) {
+        document.getElementById("headline").innerText = "All BOOKS are BOOM";
+        document.getElementById("countdown").style.display = "none";
+        clearInterval(x);
+      }
+    }, 0);
+})();
+
+//#endregion
 
 //#region book API
 
+async function boooks() {
+  const books = await fetch(
+    "https://www.googleapis.com/books/v1/volumes?q=time&printType=books&key=AIzaSyB6UbkiRzJpKT26g1WLRTiBjDl0J90SCe0"
+  );
+  const objOfBooks = await books.json();
+  const mzaObieqti = [];
+  // console.log(objOfBooks)
+  objOfBooks.items.forEach((book) => {
+    // title
+    let title = book.volumeInfo.title;
+    // console.log(title)
+    // authors
+    let authors = book.volumeInfo.authors;
+    if (book.volumeInfo.authors == undefined) {
+      authors = book.volumeInfo.publisher;
+    }
 
+	//Description
+	let description = book.volumeInfo.description;
+	if (book.volumeInfo.description == undefined) {
+		description = book.etag;
+	  }
 
-async function boooks(){
-	const books = await fetch("https://www.googleapis.com/books/v1/volumes?q=time&printType=books&key=AIzaSyB6UbkiRzJpKT26g1WLRTiBjDl0J90SCe0")
-	const objOfBooks = await books.json()
-	const mzaObieqti = []
-	console.log(objOfBooks)
-	objOfBooks.items.forEach(book => {
-		// title
-		let title = book.volumeInfo.title
-		console.log(title)
-		// authors
-		let authors = book.volumeInfo.authors
-		if(book.volumeInfo.authors == undefined){
-			authors = book.volumeInfo.publisher
-		}
-		console.log(authors)
-		// // publishedDate
-		// let publishedDate = book.volumeInfo.publishedDate
-		// if(book.volumeInfo.publishedDate == undefined){
-		// 	publishedDate = 1997
-		// }
-		// try {
-		// 	publishedDate = publishedDate.split("-")[0]
-		// } catch {
-		// 	publishedDate = publishedDate
-		// }
-		// console.log(publishedDate)
-		// images
-		let image = book.volumeInfo.imageLinks.thumbnail
-		console.log(image)
-		const droebitiObieqti = {
-			"title": title,
-			"image": image,
-			"authors": authors,
-			// "publishedDate": publishedDate
-		}
-		mzaObieqti.push(droebitiObieqti)
-	});
-	showBooks(mzaObieqti)
+    // images
+    let image = book.volumeInfo.imageLinks.thumbnail;
+
+    // console.log(image)
+    const droebitiObieqti = {
+      title: title,
+      image: image,
+      authors: authors,
+	  description: description
+    };
+    mzaObieqti.push(droebitiObieqti);
+  });
+  showBooks(mzaObieqti);
 }
 
-boooks()
+boooks();
 
-const main = document.getElementById('main')
+const main = document.getElementById("main");
 
 function showBooks(books) {
-	main.innerHTML = '';
+  main.innerHTML = "";
 
-	books.forEach((book) => {
-		const { title, image, authors} = book
+  books.forEach((book) => {
+    const { title, image, authors, description } = book;
 
-		const bookEl = document.createElement('div')
-		bookEl.classList.add('book')
+    const bookEl = document.createElement("div");
+    bookEl.classList.add("book");
 
-		bookEl.innerHTML = `
-
-          <a href="https://en.wikipedia.org/wiki/Book" target="_blank""><img
+    bookEl.innerHTML = `
+          <img
             src="${image}"
 			alt = "${title}"
-          /></a>
+          />
           <div class="book-info">
 		  <h3 class="title">${title}</h3>
             <span class="authors">${title}</span>
@@ -286,57 +288,43 @@ function showBooks(books) {
           <h3></h3>
           ${authors}
         </div>
+		`;
+    main.appendChild(bookEl);
+    bookEl.addEventListener("click", () => {
+      console.log(book);
+    });
+    //
+    const modal = document.getElementById("myModal");
+    const modalContent = document.getElementById("modal-content");
+    const close = document.getElementsByClassName("close")[0];
+    bookEl.onclick = function () {
+      modal.style.display = "block";
+    };
+    close.onclick = () => {
+      modal.style.display = "none";
+    };
 
-		`
-
-		main.appendChild(bookEl)
-	})
+    window.onclick = (event) =>{
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+    modalContent.innerHTML = `
+	<div class="modal-content">
+	<div class="col-5">
+	<span class="close">&times;</span>
+	<img class="modal-img" src="${image}"alt = "${title}"/>
+	</div>
+	<div class="col-7">
+	<h2 class="modal-title">${title}</h2>
+	<p class="modal-p">${authors}</p>
+	<p class="modal-desc">${description}</p>
+	
+	</div>
+			</div>
+			`;
+  });
 }
 //#endregion
+// on book class click show overview
 
-
-
-const navBtns = document.querySelector('.nav-btns');
-const menuBtn = document.querySelector('.menu-btn');
-const navLinks = document.querySelectorAll('.nav-icons');
-let opacity = 0; 
-let openNav = false;
-
-menuBtn.addEventListener('click', navigationCheck);
-
-navLinks.forEach(link => {
-  link.addEventListener('click',navigationCheck);  
-})
-
-function navigationCheck(){
-    if(openNav === true){
-    openNav = false;
-  }
-  else{
-    openNav = true;    
-  }
-  showNavBtns();
-}
-
-function showNavBtns(){  
-  
-      let addableOpacity = openNav ? 0.05 : -0.05;
-      let position = openNav ? 'initial' : 'absolute';
-      let transformationDistance = openNav ? '0':'-200px';
-      let transformationAngle = openNav ? '360deg' : '0deg'
-        
-      let intervalMethod = setInterval(() =>{
-        if((addableOpacity > 0 && opacity > 1) ||(addableOpacity < 0 && opacity < 0) ){
-          clearInterval(intervalMethod);
-        }
-        opacity+= addableOpacity;
-        navBtns.style.opacity = opacity;
-      }, 10) 
-    
-    
-      
-      navLinks.forEach(link =>{
-        link.style.transform = `rotateZ(${transformationAngle})`;
-      })
-  
-}
