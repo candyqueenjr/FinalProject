@@ -25,7 +25,7 @@ header {
   -o-transition: all 0.5s;
 }
 
-header.active {
+header.activee {
   position: fixed;
   top: 0;
   left: 0;
@@ -47,12 +47,9 @@ header.active {
   height: 18px;
 }
 
-/* #canvas {
-  display: block;
-  top: 0;
-  left: 0;
-} */
-
+#logo {
+  width: 204px;
+}
 
 .eyes {
   position: absolute;
@@ -149,6 +146,24 @@ header.active {
 
 /* აიქონები */
 
+.small-icons {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  line-height: 0;
+  width: 48px;
+  height: 24px;
+}
+
+#outer-icons {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+
 i {
   color: rgba(43, 45, 66, 1);
   width: 16px;
@@ -175,7 +190,6 @@ i:hover {
   -webkit-mask-image: url(/src/img/111.svg);
   mask-repeat: no-repeat;
   mask-position: center;
-  mask-size: cover;
   mask-type: alpha;
 }
 
@@ -219,6 +233,12 @@ i:hover {
 .header-txt {
   font-weight: Bolder;
   font-size: 32px;
+  height: 70px;
+  width: 500px;
+}
+
+#sub {
+  width: 430px;
 }
 
 .color-black {
@@ -238,7 +258,7 @@ i:hover {
 /* ნავიგაცია */
 
 .active {
-  border-left: 6px solid rgba(239, 35, 60, 1);
+  border-left: 4px solid #ef233c;
   font-family: "Poppins";
   font-weight: 500;
   font-size: 14px;
@@ -414,29 +434,36 @@ a:active {
   --smaller: 0.75;
 }
 
-#headline {
-  font-weight: normal;
-  letter-spacing: 0.125rem;
-  text-transform: uppercase;
-}
+
 
 #countdown {
-  margin-left: 150px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .timer {
-  margin-top: 25px;
-  margin-left: 30px;
   display: inline-block;
   text-align: center;
   font-size: 1.5em;
   list-style-type: none;
-  padding: 10px;
   text-transform: uppercase;
   border: 1px solid #2b2d4210;
   border-radius: 10px;
   width: 80px;
-  height: 92px;
+  height: 100px;
+  margin-left: 10px;
+  margin-top: 10px;
+
+}
+
+#timer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  width: 360px;
 }
 
 .date {
@@ -455,7 +482,7 @@ a:active {
   display: block;
 }
 
-@media all and (max-width: 768px) {
+/* @media all and (max-width: 768px) {
   #headline {
     font-size: calc(1.5rem * var(--smaller));
   }
@@ -467,7 +494,7 @@ a:active {
   .timer span {
     font-size: calc(3.375rem * var(--smaller));
   }
-}
+} */
 
 .mt-100 {
   margin-top: 100px;
@@ -476,6 +503,7 @@ a:active {
 
 main {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -501,6 +529,11 @@ main {
   margin-top: 5%;
   border: 2px solid #ef233c;
   border-radius: 14px;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .book-info {
@@ -592,7 +625,6 @@ main {
 .active-people {
   background-color: #ef233c;
   border-radius: 10px;
-  height: 600px;
   width: 100%;
 }
 
@@ -769,7 +801,6 @@ ol {
   height: 60px;
   margin-top: 155px;
   border: none;
-  margin-left: 180px;
   border-radius: 10px;
 }
 
@@ -799,13 +830,18 @@ ol {
   margin-left: -20px;
 }
 
-.footer {
-  height: 300px;
+#footer {
+  height: 160px;
+}
+
+hr {
+  opacity: 0.1;
+  border: 1px solid #2B2D42;
 }
 
 .nav {
   display: flex;
-  justify-content: start;
+  justify-content: end;
   text-align: center;
 }
 
@@ -821,13 +857,19 @@ ol {
   color: #2b2d42;
   opacity: 0.6;
   transition: transform 1.5 ease-in;
-}
-
-.nav-links {
   translate: 1.5 ease;
 }
 
+#wishlist {
+  margin-left: 20px;
+}
+
+#facebook {
+  margin-left: 13px;
+}
+
 .book-title {
+  width: 300px;
   margin-top: 20px;
   font-family: "Poppins";
   font-style: normal;
@@ -842,45 +884,6 @@ a:hover {
 }
 
 a:focus {
-  color: #2b2d42;
-}
-
-.menu-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  cursor: pointer;
-  width: 60px;
-  margin-top: 4px;
-  margin-left: 4px;
-}
-
-.nav-btns {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  transition: transform 1000ms;
-  margin-left: -40px;
-  margin-top: 10px;
-  background-color: #fff;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
-
-.nav-icons {
-  padding: 10px;
-  margin-top: 4px;
-  color: #00000040;
-  margin-left: -14px;
-}
-
-.nav-icons:hover {
   color: #2b2d42;
 }
 
@@ -1029,9 +1032,9 @@ a:focus {
 .dropbtn {
   background-color: transparent;
   color: white;
-  padding: 16px;
-  font-size: 16px;
+  display: block;
   border: none;
+  height: 16px;
 }
 
 .icon-btn {
@@ -1043,13 +1046,7 @@ a:focus {
   margin-left: -10px;
 }
 
-.icon-btn:hover {
-  transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-}
+
 
 .dropdown {
   position: relative;
@@ -1063,6 +1060,7 @@ a:focus {
   min-width: 160px;
   border: none;
   z-index: 1;
+  line-height: 1;
   text-align: start;
 }
 
@@ -1085,9 +1083,7 @@ a:focus {
   background-color: transparent;
 }
 
-
-
-@media only screen and (max-width: 576px) {
+/* @media only screen and (max-width: 576px) {
   .eyes {
     display: none;
   }
@@ -1096,16 +1092,16 @@ a:focus {
     display: none;
   }
 
-  .user-icon{
+  .user-icon {
     display: none;
   }
 
-  .cart-icon{
+  .cart-icon {
     display: none;
   }
 
   .nav {
-    position:relative;
+    position: relative;
     left: 360px;
     margin-top: -20px;
   }
@@ -1131,9 +1127,72 @@ a:focus {
     display: none;
   }
 
-  #img, .img {
+  #img,
+  .img {
     width: 150px;
     height: 200px;
   }
+} */
+
+@media only screen and (max-width: 768px) {
+  #deto {
+    display: none;
+  }
+
+  .book-title {
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .book-list {
+    text-align: center;
+  }
+
+ 
+}
+
+
+
+@media only screen and (max-width: 992px) {
+  .map {
+    display: none;
+  }
+
+  .map-btn {
+    display: none;
+  }
+
+  .subscribe {
+    height: auto;
+    text-align: center;
+   }
+  
+   .subscribe-input{
+    margin-bottom: 50px;
+    margin-top: 20px;
+   }
+
+}
+
+@media only screen and (max-width: 1200px) {
+  #footer-header {
+    display: none;
+  }
+  
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+
+
+@media only screen and (max-width: 1400px) {
+  #timer {
+    width: 180px;
+  }
+
 
 }

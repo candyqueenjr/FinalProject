@@ -6,9 +6,9 @@ window.onscroll = function () {
     var top = window.scrollY;
     console.log(top);
     if (top >= 100) {
-        header.classList.add('active')
+        header.classList.add('activee')
     } else {
-        header.classList.remove('active');
+        header.classList.remove('activee');
     }
 }
 
@@ -203,7 +203,7 @@ _INTERVAL_VAL = setInterval(Type, 150);
         mm = String(today.getMonth() + 1).padStart(2, "0"),
         yyyy = today.getFullYear(),
         nextYear = yyyy + 1,
-        dayMonth = "10/18/",
+        dayMonth = "12/5/",
         birthday = dayMonth + yyyy;
 
     today = mm + "/" + dd + "/" + yyyy;

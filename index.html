@@ -20,7 +20,7 @@
     <header class="header">
         <div class="container mt-5">
             <div class="row">
-                <div class="col-3 col-lg-2 col-md-3">
+                <div id="logo" class="col-sm-3">
                   <div class="eyes">
                     <div class="eye">
                       <div class="ball"></div>
@@ -32,7 +32,7 @@
                     <!-- <canvas id="canvas"></canvas> -->
                     <img class="logo" src="src/img/logo.svg" alt="logo" />
                 </div>
-                <div class="col-md-7 col-lg-9">
+                <div class="col-sm" id="deto">
                     <div class="live-indicator-block">
                         <span class="live-indicator">
                 <i class="fa fa-circle blink" aria-hidden="true"></i>233
@@ -40,23 +40,23 @@
               </span>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 col-lg-1">
+                <div class="col-sm-2" id="outer-icons">
                     <div class="row">
-                        <div class="col-4 user-icon">
+                        <div class="col user-icon small-icons">
                             <i class="fa-regular fa-circle-user "></i>
                         </div>
-                        <div class="col-4 cart-icon">
+                        <div class="col cart-icon small-icons">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </div>
-                        <div class="col-4">
+                        <div class="burger-menu col small-icons">
                             <div class="nav">
                                 <div class="dropdown">
                                     <a class="dropbtn"><i class="fa-solid fa-bars-staggered"></i></a>
                                     <div class="dropdown-content">
-                                        <a href="#">Home</a>
+                                        <a href="index.html">Home</a>
                                         <a href="#">Wishlist</a>
                                         <a href="products.html">Products</a>
-                                        <a href="#">Contact Us</a>
+                                        <a href="contact.html">Contact Us</a>
                                     </div>
                                 </div>
                                 </nav>
@@ -71,7 +71,7 @@
     <!-- მაპი/ბანერი -->
     <section class="container mt-100">
         <div class="row">
-            <div class="col-12 col-md-4 col-lg-4 mt-230 banner">
+            <div class="col-sm-4 mt-230 banner">
                 <p class="banner-txt">Best book store</p>
                 <h1 class="header-txt">
                     We <span class="color-red" id="text"></span> your books
@@ -90,7 +90,7 @@
                     <a href="#images">Scroll down</a>
                 </div>
             </div>
-            <div class="col-md-8 col-lg-8">
+            <div class="col-sm-8">
                 <div class="map">
                     <iframe src="https://snazzymaps.com/embed/440166" width="100%" height="600px"
                         style="border: none"></iframe>
@@ -273,9 +273,8 @@
                 </p>
             </div>
             <div class="col-6 mt-200">
-                <h1 id="headline"></h1>
                 <div id="countdown">
-                    <ul>
+                    <ul id="timer">
                         <li class="timer"><span id="days" class="date"></span>DAY</li>
                         <li class="timer"><span id="hours" class="date"></span>HR</li>
                         <li class="timer"><span id="minutes" class="date"></span>MIN</li>
@@ -323,7 +322,6 @@
                     <img class="people" src="/src/img/5.png" alt="" />
                     <img class="people" src="/src/img/6.png" alt="" />
                     <img class="people" src="/src/img/7.png" alt="" />
-                    <br />
                     <img class="people" src="/src/img/8.png" alt="" />
                     <img class="people" src="/src/img/9.png" alt="" />
                     <img class="people" src="/src/img/10.png" alt="" />
@@ -338,7 +336,7 @@
     </section>
     <section class="container mt-100">
         <div class="row active-people">
-            <ol class="d-flex">
+            <ol class="d-flex justify-content-center">
                 <div class="box">
                     <li class="readers">
                         <img class="person" src="src/img/active.png" alt="" />
@@ -495,21 +493,18 @@
     <!--subscribe-->
     <section class="container subscribe">
         <div class="row">
-            <div class="col-5 mt-100 ml-100">
+            <div class="col mt-100 ml-100" id="sub">
                 <h2 class="header-txt">
-                    Subscribe to our new free <br />
-            books
-                </h2>
+                    Subscribe to our new free books
+               </h2>
                 <br />
                 <p class="banner-txt">
                     Welcome to Book Depository! We have more than 5 million titles
-                    <br />
             and free delivery worldwide to over 120 countries. We also really,
-                    <br />
             really love books.
                 </p>
             </div>
-            <div class="col-6">
+            <div class="col">
                 <input
             type="mail"
             class="subscribe-input"
@@ -522,25 +517,25 @@
     <!--books-->
     <section class="container book-list mt-100">
         <div class="row">
-            <div class="col-3">
+            <div class="col">
                 <img src="src/img/1212.png" alt="" />
                 <p class="book-title">
                     Seven Husbands of Evelyn Hugo : The Sunday Times Bestseller
                 </p>
             </div>
-            <div class="col-3">
+            <div class="col">
                 <img src="src/img/1212.png" alt="" />
                 <p class="book-title">
                     Seven Husbands of Evelyn Hugo : The Sunday Times Bestseller
                 </p>
             </div>
-            <div class="col-3">
+            <div class="col">
                 <img src="src/img/1212.png" alt="" />
                 <p class="book-title">
                     Seven Husbands of Evelyn Hugo : The Sunday Times Bestseller
                 </p>
             </div>
-            <div class="col-3">
+            <div class="col">
                 <img src="src/img/1212.png" alt="" />
                 <p class="book-title">
                     Seven Husbands of Evelyn Hugo : The Sunday Times Bestseller
@@ -549,29 +544,29 @@
         </div>
     </section>
     <!--footer-->
-    <footer class="container mt-200">
+    <footer class="container mt-200" id="footer">
         <div class="row">
             <div class="col-1 footer-logo">
                 <img src="src/img/logo.png" alt="" />
             </div>
             <div class="col-5">
-                <h2 class="header-txt">
+                <h2 id="footer-header" class="header-txt">
                     Keep your mind and side <br />
             full of content
                 </h2>
             </div>
             <div class="col-3">
                 <ul class="nav">
-                    <a href="" class="nav-links">
+                    <a href="index.html" class="nav-links">
                         <li>Home</li>
                     </a>
                     <a href="" class="nav-links">
-                        <li>Wishlist</li>
+                        <li id="wishlist">Wishlist</li>
                     </a>
                     <a href="products.html" class="nav-links">
                         <li>Products</li>
                     </a>
-                    <a href="" class="nav-links">
+                    <a href="contact.html" class="nav-links">
                         <li>ContactUs</li>
                     </a>
                 </ul>
@@ -588,7 +583,7 @@
                         <li>Dribble</li>
                     </a>
                     <a href="https://www.facebook.com/" class="nav-links">
-                        <li>Facebook</li>
+                        <li id="facebook">Facebook</li>
                     </a>
                 </ul>
             </div>
@@ -612,7 +607,6 @@
                 </ul>
             </div>
         </div>
-        <hr />
     </footer>
     <!--js-->
     <script src="script.js"></script>
