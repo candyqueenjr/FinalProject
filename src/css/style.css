@@ -6,6 +6,7 @@
 
 body {
   overflow-x: hidden;
+  background-color: #000000;
 }
 
 /*header*/
@@ -155,6 +156,7 @@ header.activee {
   width: 48px;
   height: 24px;
 }
+
 
 #outer-icons {
   display: flex;
@@ -531,10 +533,7 @@ main {
   border-radius: 14px;
 }
 
-.book-list {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 
 .book-info {
   color: rgb(0, 0, 0);
@@ -831,9 +830,9 @@ ol {
   height: 160px;
 }
 
-#footer-header {
+/* #footer-header {
   margin-left: -300px;
-}
+} */
 
 hr {
   opacity: 0.1;
@@ -1140,6 +1139,10 @@ a:focus {
 
   .book-list {
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
   #socials {
@@ -1204,6 +1207,8 @@ a:focus {
   #timer {
     width: 180px;
   }
-
+  #footer-header {
+    margin-left: 1px;
+  }
 
 }

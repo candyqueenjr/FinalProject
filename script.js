@@ -160,7 +160,7 @@ async function boooks() {
         // authors
         let authors = book.volumeInfo.authors;
         if (book.volumeInfo.authors == undefined) {
-            authors = book.volumeInfo.publisher;
+            authors = "ბებიაჩემი";
         }
 
         //Description
