@@ -1,3 +1,8 @@
+
+
+//#region 
+//Book products
+
 async function boooks() {
     const books = await fetch(
         "https://www.googleapis.com/books/v1/volumes?q=search+terms"
@@ -104,13 +109,10 @@ function showBooks(books) {
 }
 
 
+//#endregion
 
-
-
-
-
-
-
+//#region 
+//sticky header
 
 const header = document.querySelector('.header');
 
@@ -123,3 +125,5 @@ window.onscroll = function () {
         header.classList.remove('activee');
     }
 }
+
+//#endregion

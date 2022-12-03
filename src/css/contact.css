@@ -11,6 +11,7 @@ body {
 /*header*/
 
 header {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -160,7 +161,6 @@ header.activee {
   text-align: center;
   align-items: center;
   justify-content: space-evenly;
-  
 }
 
 i {
@@ -180,98 +180,101 @@ i:hover {
   -o-transform: scale(1.1);
 }
 
+/* dropdown menu */
 
 .menu-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    cursor: pointer;
-    width: 60px;
-    margin-top: 4px;
-    margin-left: 4px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  cursor: pointer;
+  width: 60px;
+  margin-top: 4px;
+  margin-left: 4px;
+}
 
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  display: block;
+  border: none;
+  height: 16px;
+  margin-top: -20px;
+}
 
-  .dropbtn {
-    background-color: transparent;
-    color: white;
-    display: block;
-    border: none;
-    height: 16px;
-    margin-top: -20px;
-  }
-  
-  .icon-btn {
-    transition: transform 0.7s ease-in-out;
-    -webkit-transition: transform 0.7s ease-in-out;
-    -moz-transition: transform 0.7s ease-in-out;
-    -ms-transition: transform 0.7s ease-in-out;
-    -o-transition: transform 0.7s ease-in-out;
-    margin-left: -10px;
-  }
-  
-  .icon-btn:hover {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 160px;
-    border: none;
-    z-index: 1;
-    line-height: 1;
-    text-align: start;
-  }
-  
-  .dropdown-content a {
-    color: #1b1a2741;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    color: #1b1a27;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    background-color: transparent;
-  }
+.icon-btn {
+  transition: transform 0.7s ease-in-out;
+  -webkit-transition: transform 0.7s ease-in-out;
+  -moz-transition: transform 0.7s ease-in-out;
+  -ms-transition: transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out;
+  margin-left: -10px;
+}
 
-  .mt-230 {
-    margin-top: 230px;
-  }
+.icon-btn:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
 
-  .mt-100 {
-    margin-top: 100px;
-  }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  border: none;
+  z-index: 1;
+  line-height: 1;
+  text-align: start;
+}
 
+.dropdown-content a {
+  color: #1b1a2741;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: #1b1a27;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: transparent;
+}
+
+/* margin-top */
+
+.mt-230 {
+  margin-top: 230px;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+/* forms */
 
 .login-page {
   width: 360px;
-  padding: 8% 0 0;
+  padding: 8px 0 0;
   margin: auto;
 }
 
 .form {
   text-align: center;
+  margin-top: 140px;
 }
 
 .form input {
@@ -321,7 +324,6 @@ textarea {
   color: #111315;
   opacity: 0.45;
   border-radius: 4px;
- 
 }
 
 h1 {
@@ -353,91 +355,67 @@ a:active {
   text-decoration: none;
 }
 
-
 a {
   display: block;
   padding: 15px;
 }
 
+/* @media*/
 
+@media only screen and (max-width: 576px) {
+  .eyes {
+    display: none;
+  }
 
+  .burger-menu {
+    width: 300px;
+    height: 1px;
+    margin-top: -10px;
+    margin-left: 100px;
+  }
 
-
-
+  form .input {
+    width: 30px;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   #deto {
     display: none;
   }
 
-  .header-txt {
-    width: 320px;
-  }
-
-  .book-title {
-    text-align: center;
-    align-items: center;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-
-  .book-list {
-    text-align: center;
-  }
-
-  #socials {
-    display: none;
-  }
-
   #sub {
     margin-left: 0;
   }
- 
 }
 
-
-
 @media only screen and (max-width: 992px) {
-  .map {
+  #deto {
     display: none;
   }
 
-  .map-btn {
+  .cart-icon {
     display: none;
   }
 
-  .subscribe {
-    height: auto;
-    text-align: center;
-   }
-  
-   .subscribe-input{
-    margin-bottom: 50px;
-    margin-top: 20px;
-   }
-
-   #deto {
+  .user-icon {
     display: none;
-   }
-
-   .cart-icon {
-    display: none;
-   }
-
-   .user-icon {
-    display: none;
-   }
-
+  }
 }
 
 @media only screen and (max-width: 1200px) {
   #footer-header {
     display: none;
   }
-  
+
   .nav {
     display: flex;
     flex-wrap: wrap;
   }
+}
 
+@media only screen and (max-width: 1400px) {
+  #footer-header {
+    margin-left: 1px;
+  }
 }

@@ -1,4 +1,5 @@
 //#region 
+//sticky header
 
 const header = document.querySelector('.header');
 
@@ -27,6 +28,7 @@ navLink.forEach((a) => {
 //#endregion
 
 //#region 
+//cursor following eyes
 
 var balls = document.getElementsByClassName("ball");
 document.onmousemove = function(event){
@@ -66,7 +68,7 @@ function Type() {
     _ELEMENT.innerHTML = text;
     _PART_INDEX++;
 
-    // If full sentence has been displayed then start to delete the sentence after some time
+// If full sentence has been displayed then start to delete the sentence after some time
     if (text === _CONTENT[_PART]) {
         clearInterval(_INTERVAL_VAL);
         setTimeout(function () {

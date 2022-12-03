@@ -144,7 +144,7 @@ header.activee {
   }
 }
 
-/* აიქონები */
+/* აიქონები/dropdown menu */
 
 .small-icons {
   display: flex;
@@ -156,13 +156,11 @@ header.activee {
   height: 24px;
 }
 
-
 #outer-icons {
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: space-evenly;
-  
 }
 
 i {
@@ -180,6 +178,58 @@ i:hover {
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  display: block;
+  border: none;
+  height: 16px;
+}
+
+.icon-btn {
+  transition: transform 0.7s ease-in-out;
+  -webkit-transition: transform 0.7s ease-in-out;
+  -moz-transition: transform 0.7s ease-in-out;
+  -ms-transition: transform 0.7s ease-in-out;
+  -o-transition: transform 0.7s ease-in-out;
+  margin-left: -10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  border: none;
+  z-index: 1;
+  line-height: 1;
+  text-align: start;
+}
+
+.dropdown-content a {
+  color: #1b1a2741;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: #1b1a27;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: transparent;
 }
 
 /* მაპი */
@@ -248,12 +298,30 @@ i:hover {
   font-size: 18px;
 }
 
-.mt-230 {
-  margin-top: 230px;
+/* margins*/
+
+.mt-100 {
+  margin-top: 100px;
 }
 
 .mt-130 {
   margin-top: 130px;
+}
+
+.mt-200 {
+  margin-top: 200px;
+}
+
+.mt-230 {
+  margin-top: 230px;
+}
+
+.left {
+  margin-left: 62px;
+}
+
+.ml-100 {
+  margin-left: 100px;
 }
 
 /* ნავიგაცია */
@@ -304,7 +372,10 @@ a:active {
   color: rgba(0, 0, 0, 0.6);
 }
 
-/* Animation */
+/*სურათების კარუსელი*/
+
+/* Animation 1*/
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -313,8 +384,6 @@ a:active {
     transform: translateX(calc(-250px * 7));
   }
 }
-
-/* Styling */
 #logos-home-page .slider {
   height: auto;
   margin: auto;
@@ -384,7 +453,6 @@ a:active {
     -o-transform: translateX(calc(0px * 3));
   }
 }
-/* Styling */
 #logos-home-page .slider2 {
   height: auto;
   margin: auto;
@@ -426,22 +494,16 @@ a:active {
   justify-content: center;
 }
 
-.mt-200 {
-  margin-top: 200px;
-}
-
 /* ტაიმერი */
 :root {
   --smaller: 0.75;
 }
 
-
-
 #countdown {
-    margin: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .timer {
@@ -456,7 +518,6 @@ a:active {
   height: 100px;
   margin-left: 10px;
   margin-top: 10px;
-
 }
 
 #timer {
@@ -483,23 +544,6 @@ a:active {
   display: block;
 }
 
-/* @media all and (max-width: 768px) {
-  #headline {
-    font-size: calc(1.5rem * var(--smaller));
-  }
-
-  .timer {
-    font-size: calc(1.125rem * var(--smaller));
-  }
-
-  .timer span {
-    font-size: calc(3.375rem * var(--smaller));
-  }
-} */
-
-.mt-100 {
-  margin-top: 100px;
-}
 /*books*/
 
 main {
@@ -531,8 +575,6 @@ main {
   border: 2px solid #ef233c;
   border-radius: 14px;
 }
-
-
 
 .book-info {
   color: rgb(0, 0, 0);
@@ -600,10 +642,6 @@ main {
 }
 
 /* PEOPLE */
-
-.left {
-  margin-left: 62px;
-}
 
 .people {
   padding: 12px;
@@ -783,15 +821,13 @@ ol {
   vertical-align: baseline;
 }
 
+/*subscribe*/
+
 .subscribe {
   margin-top: 120px;
   height: 340px;
   background: #edf2f4;
   border-radius: 10px;
-}
-
-.ml-100 {
-  margin-left: 100px;
 }
 
 .subscribe-input {
@@ -828,17 +864,15 @@ ol {
   margin-left: -20px;
 }
 
+/*footer*/
+
 #footer {
   height: 160px;
 }
 
-/* #footer-header {
-  margin-left: -300px;
-} */
-
 hr {
   opacity: 0.1;
-  border: 1px solid #2B2D42;
+  border: 1px solid #2b2d42;
 }
 
 .nav {
@@ -1025,59 +1059,7 @@ a:focus {
   color: #2b2d42;
 }
 
-.dropbtn {
-  background-color: transparent;
-  color: white;
-  display: block;
-  border: none;
-  height: 16px;
-}
-
-.icon-btn {
-  transition: transform 0.7s ease-in-out;
-  -webkit-transition: transform 0.7s ease-in-out;
-  -moz-transition: transform 0.7s ease-in-out;
-  -ms-transition: transform 0.7s ease-in-out;
-  -o-transition: transform 0.7s ease-in-out;
-  margin-left: -10px;
-}
-
-
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  min-width: 160px;
-  border: none;
-  z-index: 1;
-  line-height: 1;
-  text-align: start;
-}
-
-.dropdown-content a {
-  color: #1b1a2741;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  color: #1b1a27;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: transparent;
-}
+/*media*/
 
 @media only screen and (max-width: 576px) {
   .eyes {
@@ -1108,19 +1090,18 @@ a:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+  }
 
-#countdown {
-  margin-top: -100px;
-}
+  #countdown {
+    margin-top: -100px;
+  }
 
-#people-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-  
+  #people-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1154,10 +1135,7 @@ a:focus {
   #sub {
     margin-left: 0;
   }
- 
 }
-
-
 
 @media only screen and (max-width: 992px) {
   .map {
@@ -1171,39 +1149,36 @@ a:focus {
   .subscribe {
     height: auto;
     text-align: center;
-   }
-  
-   .subscribe-input{
+  }
+
+  .subscribe-input {
     margin-bottom: 50px;
     margin-top: 20px;
-   }
+  }
 
-   #deto {
+  #deto {
     display: none;
-   }
+  }
 
-   .cart-icon {
+  .cart-icon {
     display: none;
-   }
+  }
 
-   .user-icon {
+  .user-icon {
     display: none;
-   }
-
+  }
 }
 
 @media only screen and (max-width: 1200px) {
   #footer-header {
     display: none;
   }
-  
+
   .nav {
     display: flex;
     flex-wrap: wrap;
   }
-
 }
-
 
 @media only screen and (max-width: 1400px) {
   #timer {
@@ -1212,5 +1187,4 @@ a:focus {
   #footer-header {
     margin-left: 1px;
   }
-
 }
