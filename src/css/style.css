@@ -601,6 +601,9 @@ main {
 
 /* PEOPLE */
 
+.left {
+  margin-left: 62px;
+}
 
 .people {
   padding: 12px;
